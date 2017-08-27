@@ -1,0 +1,292 @@
+/*  
+ *  ***************************************************
+ *  SIMPLE.SASS
+ *  ***************************************************
+ *  Simple SASS Boilerplate based on HTML5 Boilerplate 
+ *  ***************************************************
+
+ *  MIXINS FILE
+*/
+
+/* Links and Buttons */
+/* ============================================== */
+
+@mixin button() {
+    display: inline-block;
+    background: $gray-dark;
+    color: $white;
+    text-transform: uppercase;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 $padding/4;
+    font-size: 1.2em;
+    font-weight: 700;
+    font-size: 1.2em;
+    font-weight: 700;
+    border: none;
+    outline-style: solid;
+    outline-width: 0px;
+    font-family: $font_custom_1;
+    cursor: pointer;
+    
+    @include transition(all,0.2s,ease);
+    &:hover {
+        color: $white;
+        background: rgba($gray-dark,0.8);
+    }
+    &.small {
+        font-size: 1em;
+        height: 30px;
+        line-height: 30px;
+    }
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+@mixin button-color($background,$color) {
+    color: $color;
+    background: $background;
+    &:hover {
+        color: $color;
+        background: rgba($background,0.8);
+    }
+}
+
+
+// Icon Button
+@mixin icon-button($icon) {
+    @include button;
+    margin-top: $margin/2;
+    padding: 0 $padding/4 0 ($padding + 10);
+    position: relative;
+    &::before,
+    &::after {
+        content: $icon;
+        font-family: $font-icon-1;
+        font-size: 2em;
+        font-weight: 300;
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        background: rgba($black,0.2);
+        margin-right: $margin/4;
+        position: absolute;
+        left: 0;
+        right: auto;
+        top: 0;
+        bottom: 0;
+    }
+    &::after {
+        display: none;
+    }
+    &.icon-on-right {
+        @include icon-button-right();
+    }
+}
+
+@mixin icon-button-left() {
+    padding: 0 $padding/4 0 ($padding + 10);
+    &::before {
+        margin-right: $margin/4;
+        left: 0;
+        right: auto;
+    }
+    &::after {
+        display: none;
+    }
+}
+@mixin icon-button-right() {
+    padding: 0 ($padding + 10) 0 $padding/4;
+    &::before {
+        display: none;
+    }
+    &::after {
+        display: block;
+        margin-left: $margin/4;
+        margin-right: 0;
+        left: auto;
+        right: 0;
+    }
+}
+
+
+
+
+@mixin resetlist {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+@mixin transition ( $property, $duration, $style) {
+    
+    -webkit-transition-property: $property;  
+    -webkit-transition-duration: $duration;
+    -webkit-transition-timing-function: $style;
+ 
+            transition-property: $property;  
+            transition-duration: $duration;
+            transition-timing-function: $style;
+}
+ 
+// Transforms //
+// ********************** //
+@mixin transform ( $transformProperties ) {
+    -webkit-transform: $transformProperties;
+            transform: $transformProperties;
+}
+ 
+// Transforms > Translate //
+// ********************** //
+@mixin translate ( $x, $y ) {
+    -webkit-transform: translate($x,$y);
+            transform: translate($x,$y);
+}
+ 
+@mixin translate-50Y {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+ 
+@mixin translate-50X {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+ 
+@mixin translate-50 {
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
+ 
+// Ellipsis //
+// ********************** //
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ 
+// Placeholder //
+// ********************** //
+@mixin placeholder($color,$size,$weight) {
+    ::-webkit-input-placeholder {color:$arguments; font-size: $size; font-weight: $weight;}
+    ::-moz-placeholder {color:$arguments; font-size: $size; font-weight: $weight;}
+    :-ms-input-placeholder {color:$arguments; font-size: $size; font-weight: $weight;}
+}
+ 
+// Position //
+// ********************** //
+@mixin place($top,$right,$bottom,$left) {
+    top:$top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// Size
+// ********************** //
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// Border //
+// ********************** //
+@mixin border($size, $style, $col) {
+    border-width: $size;
+    border-style: $style;
+    border-color: $col;
+}
+
+ 
+// BoxSizing //
+// ********************** //
+@mixin boxsizing($property) {
+  -webkit-box-sizing: $property;
+     -moz-box-sizing: $property;
+          box-sizing: $property;
+}
+
+// Clearfix
+// ********************** //
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    *zoom: 1;
+}
+
+//@mixin cfix
+
+// Ratio Mixin 
+// ********************** //
+@mixin ratio_16-9 {
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 56.25%;
+    }
+}
+
+@mixin ratio_4-3{
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 75%;
+    }
+}
+
+@mixin ratio_8-5 {
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 62.5%;
+    }
+}
+
+@mixin ratio_3-2 {
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 66%;
+    }
+}
+
+@mixin ratio_1-2 {
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 50%;
+    }
+}
+
+@mixin ratio_1-1 {
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+}
+
+@mixin ratio_content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

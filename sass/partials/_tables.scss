@@ -1,0 +1,58 @@
+.tab {
+    margin: $table_margin;
+    border-collapse: collapse;
+    width: 100%;
+    td,
+    th {
+        padding: $table_cell_padding;
+    }
+    thead {
+        color: $table_head_color;
+        background: $table_head_background;
+        font-size: $table_head_fontsize;
+    }
+    tbody {
+        tr {
+            td {
+            }
+            
+        }
+    }
+    &.tab-bordered {
+        border: $table_border;
+        tr {
+            border-bottom: $table_border;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        thead {
+            border-bottom: $table_border;
+        }
+        td,
+        th {
+            padding: $table_cell_padding;
+            border-right: $table_border;
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+    
+    &.tab-zebra {
+        
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    color: $table_zebra_odd_color;
+                    background: $table_zebra_odd_background;
+                }
+                &:nth-child(even) {
+                    color: $table_zebra_even_color;
+                    background: $table_zebra_even_background;
+                }
+            }
+        }
+    }
+}
+

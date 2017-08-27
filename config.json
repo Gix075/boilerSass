@@ -1,0 +1,29 @@
+{
+    "install": {
+        "bootstrap": true,
+        "fontawesome": true,
+        "normalize": false
+    },
+    "files": {
+        "sass": "sass/boilerSass.scss",
+        "css": "css/boilerSass.scss"
+    },
+    "vendors": {
+        "bootstrap": {
+            "src": "node_modules/bootstrap/scss/",
+            "dest": "sass/vendors/bootstrap/",
+            "sass": "bootstrap.scss"
+        },
+        "fontawesome": {
+            "src": "node_modules/font-awesome/scss/",
+            "dest": "sass/vendors/font-awesome/",
+            "sass": "font-awesome.scss",
+            "fonts": "node_modules/font-awesome/fonts/"
+        },
+        "normalize": {
+            "src": "",
+            "dest": "sass/vendors/",
+            "sass": "normalize.scss"
+        }
+    }
+}

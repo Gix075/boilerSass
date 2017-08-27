@@ -1,0 +1,134 @@
+/*!  
+ *  ***************************************************
+ *  boilerSASS
+ *  ***************************************************
+ *  Simple SASS Boilerplate based on HTML5 Boilerplate 
+ *  ***************************************************
+
+ *  GLOBAL STYLE
+*/
+
+// This is the "global style". 
+// Probably you can modify this style, simply editing the "_variables.scss" and "_mixins.scss" files
+
+/* ==========================================================================
+   BODY
+   ========================================================================== */
+
+html,
+body {
+    margin: $body_margin;
+    padding: $body_padding;
+    font-family: $body_font_family;
+    font-weight: $font_base_weight;
+    font-size: $font_base_size;
+    color: $font_base_color;
+    line-height: $font_base_lineheight;
+}
+
+/* Standard Links */
+/* **************************************** */
+ 
+a:link {
+    color: $link_color;
+    text-decoration: $link_decoration;
+    @include transition(color,0.2s,ease);
+}
+ 
+a:visited {
+    color: $link_color_visited;
+    text-decoration: $link_decoration_visited;
+}
+ 
+a:hover {
+    color: $link_color_hover;
+    text-decoration: $link_decoration_hover;
+}
+ 
+a:active {
+    color: $link_color_active;
+    text-decoration: $link_decoration_active;
+}
+ 
+a:focus { 
+    outline: link_outline_focus; 
+    color: $link_color_focus;
+    text-decoration: $link_decoration_focus;
+}
+
+/* Selection */
+/* **************************************** */
+::-moz-selection {
+    background: $text_selection_bgcolor;
+    text-shadow: $text_selection_textshadow;
+}
+
+::selection {
+    background: $text_selection_bgcolor;
+    text-shadow: $text_selection_textshadow;
+}
+
+/* Box-Sizing */
+/* **************************************** */
+* {
+    @include boxsizing(border-box);
+}
+
+/* HR */
+/* **************************************** */
+hr {
+    display: block;
+    height: $hr_height;
+    border: 0;
+    border-top: $hr_border_width $hr_border_style $hr_border_color;
+    margin: $hr_margin_top 0 $hr_margin_bottom 0;
+    padding: 0;
+}
+ 
+/* Elements */
+/* **************************************** */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+strong {
+    font-weight: $font_base_strong_weight;
+}
+
+
+/*  ==========================================================================
+    Browser Upgrade Prompt
+    ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/*  ==========================================================================
+    Responsive/Fluid Images 
+    ========================================================================== */
+
+.img-fluid img, img.img-fluid, 
+.img-100 img, img.img-100  {
+    width: 100%;
+}
+

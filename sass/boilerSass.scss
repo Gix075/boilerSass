@@ -1,0 +1,72 @@
+/*!  
+ *  ***************************************************
+ *  boilerSASS
+ *  ***************************************************
+ *  Simple SASS Boilerplate based on HTML5 Boilerplate 
+ *  ***************************************************
+*/
+
+
+// MAIN FILE
+// This is the project main file. 
+// Don't put any sass/css code inside this file but include here your own partial files.
+// As example you can place your style inside the _custom.scss file.
+
+// Fonts
+// ***************************************
+// This is the file for the fonts definitions
+// This must be at the beginning of the file
+@import "partials/fonts"; 
+
+// SASS Variables & Mixins
+// ***************************************
+// The sass variables and mixins definitions
+@import "variables";
+@import "mixins";
+
+// Normalize.css
+// ***************************************
+@import 'vendors/normalize';
+
+// Normalize
+// ***************************************
+// Here will be included the import of Normalize if is selected on the configuration
+// {{NORMALIZE}}
+
+// Bootstrap 4
+// ***************************************
+// Here will be included the import of Bootstrap4 if is selected on the configuration
+// {{BOOTSTRAP}}
+
+// Icon Fonts
+// ***************************************
+// Here will be included the import of FontAwesome if is selected on the configuration
+// {{FONTAWESOME}}
+
+// Global Style 
+// ***************************************
+@import "partials/global";
+
+// Buttons 
+// ***************************************
+@import "partials/buttons";
+
+// Typography 
+// ***************************************
+@import "partials/typography";
+
+// Tables 
+// ***************************************
+@import "partials/tables";
+
+// Your Custom Style
+// ***************************************
+// This is the import for your own custom style
+@import "custom"; 
+// Include your own other partials after this line
+
+
+// CSS Utilities
+// ***************************************
+// This must be at the end of the file in order to leave inalterated the css utilities
+@import "partials/utilities"; 
