@@ -10,8 +10,20 @@ All vendors package are managed by NPM.
 
 ### History
 
+
+
+#### version 1.5.2
+* Dynamical installation process fixed
+
+#### version 1.5.1
+* MaterialDesign Icons added
+* Elegant Icons added
+
 #### version 1.5.0
 * Dynamical installation process added
+* Normalize.css
+* Bootstrap 4 added
+* FontAwesome added
 
 #### version 1.4.0
 * New mixins added

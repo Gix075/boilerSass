@@ -14,7 +14,7 @@ module.exports = function (grunt) {
                     replacements: [
                         {
                             pattern: "// {{BOOTSTRAP}}",
-                            replacement: "@include '<%= params.vendors.bootstrap.dest %><%= params.vendors.bootstrap.sass %>'"
+                            replacement: "@import '<%= params.vendors.bootstrap.sass %>';"
                         }
                     ]
                 }
@@ -27,7 +27,33 @@ module.exports = function (grunt) {
                     replacements: [
                         {
                             pattern: "// {{FONTAWESOME}}",
-                            replacement: "@include '<%= params.vendors.fontawesome.dest %><%= params.vendors.fontawesome.sass %>'"
+                            replacement: "@import '<%= params.vendors.fontawesome.sass %>';"
+                        }
+                    ]
+                }
+            },
+            materialicons: {
+                files: {
+                    '<%= params.files.sass %>': '<%= params.files.sass %>'
+                },
+                options: {
+                    replacements: [
+                        {
+                            pattern: "// {{MATERIALICONS}}",
+                            replacement: "@import '<%= params.vendors.materialicons.sass %>';"
+                        }
+                    ]
+                }
+            },
+            eleganticons: {
+                files: {
+                    '<%= params.files.sass %>': '<%= params.files.sass %>'
+                },
+                options: {
+                    replacements: [
+                        {
+                            pattern: "// {{ELEGANTICONS}}",
+                            replacement: "@import '<%= params.vendors.eleganticons.sass %>';"
                         }
                     ]
                 }
@@ -40,7 +66,7 @@ module.exports = function (grunt) {
                     replacements: [
                         {
                             pattern: "// {{NORMALIZE}}",
-                            replacement: "@include '<%= params.vendors.normalize.dest %><%= params.vendors.normalize.sass %>'"
+                            replacement: "@include '<%= params.vendors.normalize.sass %>';"
                         }
                     ]
                 }
@@ -48,6 +74,11 @@ module.exports = function (grunt) {
         },
         
         copy: {
+            
+            install: {
+                
+            },
+            
             bootstrap: {
                 files: [
                     {
@@ -55,6 +86,12 @@ module.exports = function (grunt) {
                         cwd: '<%= params.vendors.bootstrap.src %>',
                         src: ['**'],
                         dest: '<%= params.vendors.bootstrap.dest %>'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= params.vendors.bootstrap.js.src %>',
+                        src: ['**'],
+                        dest: '<%= params.vendors.bootstrap.js.dest %>'
                     }
                 ]
             },
@@ -73,8 +110,41 @@ module.exports = function (grunt) {
                         dest: 'fonts/'
                     }
                 ]
+            },
+            materialicons: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= params.vendors.materialicons.fonts %>',
+                        src: ['**'],
+                        dest: 'fonts/'
+                    }
+                ]
+            },
+            eleganticons: {
+                files: [
+                    {
+                        src: '<%= params.vendors.eleganticons.src %>',
+                        dest: '<%= params.vendors.eleganticons.dest %><%= params.vendors.eleganticons.sass %>'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= params.vendors.eleganticons.fonts %>',
+                        src: ['**'],
+                        dest: 'fonts/'
+                    }
+                ]
             }
         },
+        
+        processhtml: {
+            options: {},
+            bootstrap: {
+                files: {
+                    'index.html': ['index.html']
+                } 
+            }
+        }, 
         
         sass: {  
             dist: { 
@@ -116,7 +186,8 @@ module.exports = function (grunt) {
             if (params.install.bootstrap === true) {
                 grunt.task.run([
                     'copy:bootstrap',
-                    'string-replace:bootstrap'
+                    'string-replace:bootstrap',
+                    'processhtml:bootstrap'
                 ]);
             }  
             
@@ -125,6 +196,22 @@ module.exports = function (grunt) {
                 grunt.task.run([
                     'copy:fontawesome',
                     'string-replace:fontawesome'
+                ]);
+            }
+            
+            // Material Design Icons
+            if (params.install.materialicons === true) {
+                grunt.task.run([
+                    'copy:materialicons',
+                    'string-replace:materialicons'
+                ]);
+            }
+            
+            // Elegant Icons
+            if (params.install.eleganticons === true) {
+                grunt.task.run([
+                    'copy:eleganticons',
+                    'string-replace:eleganticons'
                 ]);
             }
             

@@ -1,7 +1,7 @@
 {
   "name": "boilersass",
   "version": "1.5.0",
-  "description": "simple SASS boilerplate",
+  "description": "Simple SASS Boilerplate",
   "main": "sass/boilerSass.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,12 +25,17 @@
   "homepage": "https://github.com/Gix075/boilerSass#readme",
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
+    "elegant-icons": "0.0.1",
     "font-awesome": "^4.7.0",
     "grunt": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-processhtml": "^0.4.1",
     "grunt-string-replace": "^1.3.1",
-    "html5-boilerplate-npm": "^4.1.0-B"
+    "html5-boilerplate-npm": "^4.1.0-B",
+    "jquery": "^3.2.1",
+    "material-design-icons": "^3.0.1",
+    "popper.js": "^1.12.5"
   }
 }

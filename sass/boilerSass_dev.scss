@@ -33,14 +33,14 @@
 // Bootstrap 4
 // ***************************************
 // Here will be included the import of Bootstrap4 if is selected on the configuration
-@import 'vendors/bootstrap/bootstrap.scss';
+// {{BOOTSTRAP}}
 
 // Icon Fonts
 // ***************************************
 // Here will be included the import of the icons if is selected on the configuration
 // {{FONTAWESOME}}
-@import 'vendors/material-icons.scss';
-@import 'vendors/elegant-icons/elegant-icons.scss';
+// {{MATERIALICONS}}
+// {{ELEGANTICONS}}
 
 // Global Style 
 // ***************************************

@@ -1,8 +1,10 @@
 {
     "install": {
+        "normalize": false,
         "bootstrap": true,
         "fontawesome": true,
-        "normalize": false
+        "materialicons": false,
+        "eleganticons": false
     },
     "files": {
         "sass": "sass/boilerSass.scss",
@@ -12,18 +14,40 @@
         "bootstrap": {
             "src": "node_modules/bootstrap/scss/",
             "dest": "sass/vendors/bootstrap/",
-            "sass": "bootstrap.scss"
+            "sass": "vendors/bootstrap/bootstrap.scss",
+            "js": {
+                "src": "node_modules/bootstrap/dist/js/",
+                "dest": "js/vendors/bootstrap/"
+            }
         },
         "fontawesome": {
             "src": "node_modules/font-awesome/scss/",
             "dest": "sass/vendors/font-awesome/",
-            "sass": "font-awesome.scss",
+            "sass": "vendors/font-awesome/font-awesome.scss",
             "fonts": "node_modules/font-awesome/fonts/"
+        },
+        "materialicons": {
+            "sass": "vendors/material-icons.scss",
+            "fonts": "node_modules/material-design-icons/iconfont/"
+        },
+        "eleganticons": {
+            "src": "node_modules/elegant-icons/style.css",
+            "dest": "sass/vendors/elegant-icons/",
+            "sass": "vendors/elegant-icons/elegant-icons.scss",
+            "fonts": "node_modules/elegant-icons/fonts/"
         },
         "normalize": {
             "src": "",
             "dest": "sass/vendors/",
-            "sass": "normalize.scss"
+            "sass": "vendors/normalize.scss"
+        },
+        "html5boilerplate": {
+            "src": "node_modules/html5-boilerplate-npm/js/",
+            "dist": "js/"
+        },
+        "popper": {
+            "src": "node_modules/popper.js/dist/",
+            "dest": "js/vendors/popper/"
         }
     }
 }
