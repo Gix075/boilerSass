@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>BOILER SASS</title>
-        <link href='css' rel='stylesheet' type='text/css'>
         <link href='css/boilerSass.css' rel='stylesheet' type='text/css'>
         
     </head>
@@ -21,10 +20,82 @@
             </header>
             <div class="demo_wrapper">
                 
-                <p>
-                    <img width="100px" src="sass-logo.png">
-                    <img width="100px" src="grunt-logo.png">
+                <p class="marg-top">
+                    <em>This is the <strong>documentation</strong> and an <strong>example</strong> of BoilerSASS usage.<br>
+                    You can download the code from GitHub <a href="https://github.com/Gix075/boilerSass" target="_blank">https://github.com/Gix075/boilerSass</a></em>
                 </p>
+                
+                <p class="marg-top font-large">
+                    <strong>BoilerSASS</strong> is a simple boilerplate for start new SASS projects.<br>
+                    BoilerSASS is based on HTML5 Boilerplate and include Grunt as tasks manager.
+                </p>
+                
+                <hr>
+                
+                <h3>Vendors Libs</h3>
+                <p class="marg-top font-medium">
+                    By default it not include anything else but you can install it loading Bootstrap or some icon libraries.<br>
+                    BoilerSASS is also modular, so you can easy remove some partials files or add your owns.
+                </p>
+                <ul class="font-medium">
+                    <li>Bootstrap 4</li>
+                    <li>Normalize.css</li>
+                    <li>Font Awesome</li>
+                    <li>Material Icons</li>
+                    <li>Elegant Icons</li>
+                </ul>
+                
+                <p class="marg-top font-medium">
+                    You can install vendors libraries using Grunt before starting project. You can select the libraries that you want, simply editing the <em>config.json</em> file.
+                </p>
+                
+                <hr>
+                
+                <h3>Patials Files</h3>
+                <p class="marg-top font-medium">
+                    BoilerSASS is modular, so you can easy remove some partials files or add your owns.<br>
+                    By default it's composed by a mainfile that includes all partial scss files and the external scss libs<br>
+                </p>
+                
+                <hr>
+                
+                <h2>How To Install</h2>
+                <p class="marg-top font-medium">
+                    In order to install BoilerSASS, download the package and follow this steps:<br>
+                </p>
+                
+                <ul>
+                    
+                    <li>
+                        <strong>Install NPM components</strong><br>
+                        Open you system console and access BoilerSASS directory on your desktop<br>
+                        the type <code>$ npm install</code>
+                    </li>
+                    
+                    <li>
+                        <strong>Configure package</strong><br>
+                        Open the file <code>config.json</code> and set as true the libraries that you want include on your sass project.
+                    </li>
+                    
+                    <li>
+                        <strong>Install vendors libs</strong><br>
+                        Open you system console and access BoilerSASS directory on your desktop<br>
+                        the type <code>$ Grunt install</code>
+                    </li>
+                    
+                    <li>
+                        <strong>Using SASS</strong><br>
+                        Once BoilerSASS is installed you can start coding Sass<br>
+                        Type <code>$ Grunt</code> on your console to first BoilerSASS compile and to start the <em>watch</em> task that autocomile SASS files when changed.
+                    </li>
+
+                </ul>
+                
+                <p class="marg-top font-medium">
+                    Now you are ready!
+                </p>
+                
+                <hr>
                 
                 <h2>Variables</h2>
                 
@@ -254,17 +325,24 @@
                     
                 </table>
                 
+                <div class="buttons-row marg-top">
+                    <h2>Buttons</h2>
+                    <button class="button">Button</button>
+                    <button class="button button-red">Button</button>
+                    <button class="button button-orange">Button</button>
+                    <button class="button button-green">Button</button>
+                    <button class="button button-yellow">Button</button>
+                    <button class="button button-purple">Button</button>
+                </div>
+                
+                
             </div>
-     
+            
+            
             
         </div>  
         
-        <button class="button">Button</button>
-        <button class="button button-red">Button</button>
-        <button class="button button-orange">Button</button>
-        <button class="button button-green">Button</button>
-        <button class="button button-yellow">Button</button>
-        <button class="button button-purple">Button</button>
+        
         
         <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>

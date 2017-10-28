@@ -1,14 +1,14 @@
 {
     "install": {
         "normalize": false,
-        "bootstrap": true,
-        "fontawesome": true,
+        "bootstrap": false,
+        "fontawesome": false,
         "materialicons": false,
         "eleganticons": false
     },
     "files": {
         "sass": "sass/boilerSass.scss",
-        "css": "css/boilerSass.scss"
+        "css": "css/boilerSass.css"
     },
     "vendors": {
         "bootstrap": {

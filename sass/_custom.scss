@@ -1,4 +1,4 @@
-/*!  
+/*
  *  ***************************************************
  *  boilerSASS
  *  ***************************************************
@@ -10,10 +10,11 @@
 
 
 body {
-    font-weight: 100;
+    font-weight: 200;
+    font-size: 18px;
 }
 .demo {
-    font-weight: 300;
+    font-weight: 200;
     header {
         background: $color_2;
         color: $white;

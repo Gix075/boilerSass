@@ -2,7 +2,13 @@
 A simple SASS / CSS boilerplate
 
 **boilerSASS** is a simple SASS Boilerplate useful to start a complete new web project in less than 10 minutes<br>
-This boilerplate is based on HTML5 Boilerplate and include also Bootstrap 4 and FontAwesome icons.
+This boilerplate is based on HTML5 Boilerplate and include also:
+
+* Bootstrap 4 
+* FontAwesome icons
+* Elegant Icons
+* Material Icons
+* Normailize.css
 
 All vendors package are managed by NPM.
 
@@ -10,7 +16,9 @@ All vendors package are managed by NPM.
 
 ### History
 
-
+#### version 1.6.0
+* Mixins added
+* CSS Style fixed
 
 #### version 1.5.2
 * Dynamical installation process fixed

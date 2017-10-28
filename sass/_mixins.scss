@@ -283,6 +283,15 @@
     }
 }
 
+@mixin ratio_custom($padding) {
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        padding-top: $padding;
+    }
+}
+
 @mixin ratio_content {
     position: absolute;
     top: 0;

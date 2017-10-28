@@ -5,7 +5,7 @@
  *  Simple SASS Boilerplate based on HTML5 Boilerplate 
  *  ***************************************************
 */
-/*!
+/*!  
  *  ***************************************************
  *  boilerSASS
  *  ***************************************************
@@ -14,7 +14,7 @@
 
  *  FONTS
 */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 /*  
  *  ***************************************************
  *  boilerSASS
@@ -35,7 +35,7 @@
 */
 /* Links and Buttons */
 /* ============================================== */
-/*
+/*!  
  *  ***************************************************
  *  boilerSASS
  *  ***************************************************
@@ -51,7 +51,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #262626;
@@ -61,7 +61,7 @@ body {
 /* Standard Links */
 /* **************************************** */
 a:link {
-  color: #B1C5CE;
+  color: #212121;
   text-decoration: none;
   -webkit-transition-property: color;
   -webkit-transition-duration: 0.2s;
@@ -72,35 +72,35 @@ a:link {
 }
 
 a:visited {
-  color: #B1C5CE;
+  color: #2e2c2c;
   text-decoration: none;
 }
 
 a:hover {
-  color: #e0e8ec;
+  color: #2e2c2c;
   text-decoration: none;
 }
 
 a:active {
-  color: #B1C5CE;
+  color: #2e2c2c;
   text-decoration: none;
 }
 
 a:focus {
   outline: link_outline_focus;
-  color: #B1C5CE;
+  color: #2e2c2c;
   text-decoration: none;
 }
 
 /* Selection */
 /* **************************************** */
 ::-moz-selection {
-  background: #d9d9d9;
+  background: #bfbfbf;
   text-shadow: none;
 }
 
 ::selection {
-  background: #d9d9d9;
+  background: #bfbfbf;
   text-shadow: none;
 }
 
@@ -118,8 +118,8 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #d9d9d9;
-  margin: 40px 0 40px 0;
+  border-top: 1px solid #a6a6a6;
+  margin: 20px 0 20px 0;
   padding: 0;
 }
 
@@ -244,7 +244,7 @@ strong {
   background: rgba(128, 0, 128, 0.8);
 }
 
-/*  
+/*!  
  *  ***************************************************
  *  boilerSASS
  *  ***************************************************
@@ -428,15 +428,6 @@ ul {
   text-align: left;
 }
 
-/*  
- *  ***************************************************
- *  boilerSASS
- *  ***************************************************
- *  Simple SASS Boilerplate based on HTML5 Boilerplate 
- *  ***************************************************
-
- *  TABLES
-*/
 .tab {
   margin: 0 0 20px 0;
   border-collapse: collapse;
@@ -452,21 +443,21 @@ ul {
   font-size: 1.2em;
 }
 .tab.tab-bordered {
-  border: 1px solid #B1C5CE;
+  border: 1px solid #a6a6a6;
 }
 .tab.tab-bordered tr {
-  border-bottom: 1px solid #B1C5CE;
+  border-bottom: 1px solid #a6a6a6;
 }
 .tab.tab-bordered tr:last-child {
   border-bottom: none;
 }
 .tab.tab-bordered thead {
-  border-bottom: 1px solid #B1C5CE;
+  border-bottom: 1px solid #a6a6a6;
 }
 .tab.tab-bordered td,
 .tab.tab-bordered th {
   padding: 10px;
-  border-right: 1px solid #B1C5CE;
+  border-right: 1px solid #a6a6a6;
 }
 .tab.tab-bordered td:last-child,
 .tab.tab-bordered th:last-child {
@@ -474,14 +465,14 @@ ul {
 }
 .tab.tab-zebra tbody tr:nth-child(odd) {
   color: inherit;
-  background: #EFF6F9;
+  background: #bfbfbf;
 }
 .tab.tab-zebra tbody tr:nth-child(even) {
   color: inherit;
   background: transparent;
 }
 
-/*
+/*!  
  *  ***************************************************
  *  boilerSASS
  *  ***************************************************
@@ -489,12 +480,12 @@ ul {
  *  ***************************************************
 */
 body {
-  font-weight: 200;
+  font-weight: 100;
   font-size: 18px;
 }
 
 .demo {
-  font-weight: 200;
+  font-weight: 300;
 }
 .demo header {
   background: #5C6F77;
@@ -529,7 +520,7 @@ body {
   text-transform: uppercase;
 }
 
-/*
+/*!  
  *  ***************************************************
  *  boilerSASS
  *  ***************************************************
@@ -901,4 +892,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=boilerSass.css.map */
+/*# sourceMappingURL=boilerSass.scss.map */

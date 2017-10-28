@@ -1,4 +1,4 @@
-/*!  
+/*  
  *  ***************************************************
  *  boilerSASS
  *  ***************************************************
@@ -9,6 +9,11 @@
 */
 
 // Probably you can modify this style simply editing the "_variables.scss" and "_mixins.scss" files
+
+
+/* ********************************** */
+/* HEADINGS */
+/* ********************************** */
 
 h1,
 h2,
@@ -117,6 +122,9 @@ h6,
     }
 }
 
+/* ********************************** */
+/* PARAGRAPHS */
+/* ********************************** */
 p,
 .p {
     font-size: $p_size;
@@ -126,11 +134,33 @@ p,
     margin: $p_margin;
 }
 
+/* ********************************** */
+/* LISTS */
+/* ********************************** */
+
 ul {
     list-style-type: ul_list_style_type;
     padding: $ul_padding;
     margin: $ul_margin;
 }
+
+ol {
+    padding: $ol_padding;
+    margin: $ol_margin;
+}
+
+ul,ol {
+    li {
+        margin: list_li_margin;
+        padding: list_li_padding;
+        line-height: list_li_lineheight;
+    }
+}
+
+
+/* ********************************** */
+/* FONT UTILITIES */
+/* ********************************** */
 
 .font-mini {
     font-size: $font_mini;
