@@ -19,9 +19,9 @@ All vendors package are managed by NPM.
 
 
 ### Usage
-*   **Install NPM components** 
-    Open you system console and access BoilerSASS directory on your desktop the type $ npm install
-                    
+*   **Install NPM components**  
+    Open you system console and access BoilerSASS directory on your desktop  
+    the type `$ npm install`                  
 *   **Configure package**  
     Open the file `config.json` and set as true the libraries that you want include on your sass project.
 *   **Install vendors libs**  
