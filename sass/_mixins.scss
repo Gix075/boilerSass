@@ -56,7 +56,7 @@
 
 
 // Icon Button
-@mixin icon-button($icon) {
+@mixin button-icon($icon) {
     @include button;
     margin-top: $margin/2;
     padding: 0 $padding/4 0 ($padding + 10);
@@ -84,11 +84,11 @@
         display: none;
     }
     &.icon-on-right {
-        @include icon-button-right();
+        @include button-icon-right();
     }
 }
 
-@mixin icon-button-left() {
+@mixin button-icon-left() {
     padding: 0 $padding/4 0 ($padding + 10);
     &::before {
         margin-right: $margin/4;
@@ -99,7 +99,7 @@
         display: none;
     }
 }
-@mixin icon-button-right() {
+@mixin button-icon-right() {
     padding: 0 ($padding + 10) 0 $padding/4;
     &::before {
         display: none;

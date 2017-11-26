@@ -1,5 +1,6 @@
 # boilerSass
-A simple SASS / CSS boilerplate
+A simple SASS / CSS boilerplate<br>
+**boilerSASS** is a Grunt ready project, so Grunt is required and you can discover more about it from [https://gruntjs.com](https://gruntjs.com).
 
 **boilerSASS** is a simple SASS Boilerplate useful to start a complete new web project in less than 10 minutes<br>
 This boilerplate is based on HTML5 Boilerplate and include also:
@@ -12,9 +13,12 @@ This boilerplate is based on HTML5 Boilerplate and include also:
 
 All vendors package are managed by NPM.
 
-**boilerSASS** is a Grunt ready project.
 
 ### History
+
+#### version 1.7.0
+* AnimateCSS added to the project
+* Installation bug fixed 
 
 #### version 1.6.0
 * Mixins added

@@ -1,6 +1,6 @@
 {
   "name": "boilersass",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Simple SASS Boilerplate",
   "main": "sass/boilerSass.scss",
   "scripts": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Gix075/boilerSass#readme",
   "dependencies": {
+    "animate.css": "^3.5.2",
     "bootstrap": "^4.0.0-beta",
     "elegant-icons": "0.0.1",
     "font-awesome": "^4.7.0",

@@ -325,6 +325,132 @@
                     
                 </table>
                 
+                <hr>
+                
+                <h2>Mixins</h2>
+                
+                
+                <table class="tab tab-bordered tab-zebra demo-tab">
+                    
+                    <thead>
+                        <tr>
+                            <th>Mixin</th>
+                            <th>Desc</th>
+                            <th>Group</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        
+                        <!-- SIZES -->
+                        <!-- ========================================= -->
+                        <tr>
+                            <td>button()</td>
+                            <td>
+                                <p>
+                                    Returns a button with default colors. <strong>Params:</strong> no params
+                                </p>
+                            </td>
+                            <td>Buttons</td>
+                        </tr>
+                        <tr>
+                            <td>button-color($background,$color)</td>
+                            <td>
+                                <p>Returns a button with custom colors. <strong>Params:</strong> $background,$color</p>
+                            </td>
+                            <td>Buttons</td>
+                        </tr>
+                        <tr>
+                            <td>button-icon($icon)</td>
+                            <td>
+                                <p>Returns a button with a custom icon. <strong>Params:</strong> $icon</p>
+                                <p><strong>Note:</strong> $icon must be the font code of the icon tha you want show. The icon font family is defined on variable $font-icon-1 in _variables.scss</p>
+                            </td>
+                            <td>Buttons</td>
+                        </tr>
+                        <tr>
+                            <td>button-icon-left()</td>
+                            <td>
+                                <p>Aligns icons to the left. This mixin must be used only with button-icon() mixin. "Left" is the default button icon align. <strong>Params:</strong> no params</p>
+                            </td>
+                            <td>Buttons</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>button-icon-right()</td>
+                            <td>
+                                <p>Aligns icons to the right. This mixin must be used only with button-icon() mixin. <strong>Params:</strong> no params</p>
+                            </td>
+                            <td>Buttons</td>
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            <td>resetlist()</td>
+                            <td>
+                                <p>Reset list with no style. <strong>Params:</strong> no params</p>
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>ellipsis()</td>
+                            <td>
+                                <p>Add "..." ellipsis to the text overflow. <strong>Params:</strong> no params</p>
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>place($top,$right,$bottom,$left)</td>
+                            <td>
+                                <p>Add top, right, bottom and left positioning. <strong>Params:</strong> $top,$right,$bottom,$left</p>
+                                <p><strong>Note:</strong> you can use px or %</p>
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>transition( $property, $duration, $style)</td>
+                            <td>
+                                <p>Add a transition with prefixes. <strong>Params:</strong> $property, $duration, $style</p>
+                            </td>
+                            <td>Transitions</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>transform( $transformProperties )</td>
+                            <td>
+                                <p>Add custom transform properties with prefixes. <strong>Params:</strong> $transformProperties</p>
+                                <p><strong>Note:</strong> $transformProperties must be a CSS3 trasform valid rule</p>
+                            </td>
+                            <td>Transforms</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>translate ( $x, $y )</td>
+                            <td>
+                                <p>Add custom transform translate properties with prefixes. <strong>Params:</strong> $x,$y</p>
+                                <p><strong>Note:</strong> $x,$y can be a fixed size or a liquid size</p>
+                            </td>
+                            <td>Transforms</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>translate-50()<br>translate-50X()<br>translate-50Y()</td>
+                            <td>
+                                <p>Add a -50% translate on X and Y axis. <strong>Params:</strong> no params</p>
+                            </td>
+                            <td>Transforms</td>
+                        </tr>
+                        
+                        
+                        
+                    </tbody>
+                    
+                </table>
+                
                 <div class="buttons-row marg-top">
                     <h2>Buttons</h2>
                     <button class="button">Button</button>
@@ -335,8 +461,12 @@
                     <button class="button button-purple">Button</button>
                 </div>
                 
+                <div class="grid_example grid grid-default">
+                    
+                </div>
                 
             </div>
+            
             
             
             

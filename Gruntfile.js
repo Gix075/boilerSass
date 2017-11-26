@@ -66,7 +66,20 @@ module.exports = function (grunt) {
                     replacements: [
                         {
                             pattern: "// {{NORMALIZE}}",
-                            replacement: "@include '<%= params.vendors.normalize.sass %>';"
+                            replacement: "@import '<%= params.vendors.normalize.sass %>';"
+                        }
+                    ]
+                }
+            },
+            animate: {
+                files: {
+                    '<%= params.files.sass %>': '<%= params.files.sass %>'
+                },
+                options: {
+                    replacements: [
+                        {
+                            pattern: "// {{ANIMATE}}",
+                            replacement: "@import '<%= params.vendors.animate.sass %>';"
                         }
                     ]
                 }
@@ -74,10 +87,6 @@ module.exports = function (grunt) {
         },
         
         copy: {
-            
-            install: {
-                
-            },
             
             bootstrap: {
                 files: [
@@ -125,13 +134,21 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: '<%= params.vendors.eleganticons.src %>',
-                        dest: '<%= params.vendors.eleganticons.dest %><%= params.vendors.eleganticons.sass %>'
+                        dest: '<%= params.vendors.eleganticons.dest %>'
                     },
                     {
                         expand: true,
                         cwd: '<%= params.vendors.eleganticons.fonts %>',
                         src: ['**'],
                         dest: 'fonts/'
+                    }
+                ]
+            },
+            animate: {
+                files: [
+                    {
+                        src: '<%= params.vendors.animate.src %>',
+                        dest: '<%= params.vendors.animate.dest %>'
                     }
                 ]
             }
@@ -166,6 +183,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-string-replace');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-processhtml');
     
     // Developing Tasks
     grunt.registerTask('sass_compile', ['sass']);
@@ -219,6 +237,14 @@ module.exports = function (grunt) {
             if (params.install.normalize === true) {
                 grunt.task.run([
                     'string-replace:normalize'
+                ]);
+            }
+            
+            // Animate
+            if (params.install.animate === true) {
+                grunt.task.run([
+                    'copy:animate',
+                    'string-replace:animate'
                 ]);
             }
             

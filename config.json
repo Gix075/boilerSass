@@ -1,6 +1,7 @@
 {
     "install": {
         "normalize": false,
+        "animate": false,
         "bootstrap": false,
         "fontawesome": false,
         "materialicons": false,
@@ -32,14 +33,19 @@
         },
         "eleganticons": {
             "src": "node_modules/elegant-icons/style.css",
-            "dest": "sass/vendors/elegant-icons/",
-            "sass": "vendors/elegant-icons/elegant-icons.scss",
+            "dest": "sass/vendors/elegant-icons.scss",
+            "sass": "vendors/elegant-icons.scss",
             "fonts": "node_modules/elegant-icons/fonts/"
         },
         "normalize": {
             "src": "",
             "dest": "sass/vendors/",
             "sass": "vendors/normalize.scss"
+        },
+        "animate": {
+            "src": "node_modules/animate.css/animate.css",
+            "dest": "sass/vendors/animate.scss",
+            "sass": "vendors/animate.scss"
         },
         "html5boilerplate": {
             "src": "node_modules/html5-boilerplate-npm/js/",

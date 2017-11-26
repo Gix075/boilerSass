@@ -21,7 +21,13 @@ $margin: $space;
 // =================================
 $breakpoint_phone: 600px;
 $breakpoint_tablet: 768px; 
-$breakpoint_desktop: 1024px; 
+$breakpoint_desktop_small: 1024px; 
+$breakpoint_desktop: 1280px; 
+
+$bp_phone: $breakpoint_phone;
+$bp_tablet: $breakpoint_tablet; 
+$bp_desktop_small: $breakpoint_desktop_small; 
+$bp_desktop: $breakpoint_desktop_small; 
 
 
 // =================================
