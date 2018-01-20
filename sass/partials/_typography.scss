@@ -197,3 +197,42 @@ ul,ol {
 .left-txt {
     text-align: left;
 }
+
+.font-thin {
+    font-weight: $font_weight_thin;
+}
+
+.font-extralight,
+.font-extra-light {
+    font-weight: $font_weight_extralight;
+}
+
+.font-light {
+    font-weight: $font_weight_light;
+}
+
+.font-regular {
+    font-weight: $font_weight_regular;
+}
+
+.font-medium {
+    font-weight: $font_weight_medium;
+}
+
+.font-semibold,
+.font-semibold {
+    font-weight: $font_weight_semibold;
+}
+
+.font-bold {
+    font-weight: $font_weight_bold;
+}
+
+.font-extrabold,
+.font-extrabold {
+    font-weight: $font_weight_extrabold;
+}
+
+.font-black {
+    font-weight: $font_weight_black;
+}
