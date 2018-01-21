@@ -21,12 +21,12 @@ All vendors package are managed by NPM.
 ### Usage
 *   **Install NPM components**  
     Open you system console and access BoilerSASS directory on your desktop  
-    the type `$ npm install`                  
+    then type `$ npm install`                  
 *   **Configure package**  
     Open the file `config.json` and set as true the libraries that you want include on your sass project.
 *   **Install vendors libs**  
     Open you system console and access BoilerSASS directory on your desktop  
-    the type `$ Grunt install`
+    then type `$ Grunt install`
 *   **Using SASS**  
     Once BoilerSASS is installed you can start coding Sass  
     Type `$ Grunt` on your console to first BoilerSASS compile and to start the _watch_ task that autocomile SASS files when changed.
