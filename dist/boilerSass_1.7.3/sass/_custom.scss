@@ -1,0 +1,61 @@
+/*
+ *  ***************************************************
+ *  boilerSASS
+ *  ***************************************************
+ *  Simple SASS Boilerplate based on HTML5 Boilerplate 
+ *  ***************************************************
+*/
+
+// This is just a simple demo for your custom style. You can replace this code with your own!
+
+
+body {
+    font-weight: 200;
+    font-size: 18px;
+}
+.demo {
+    font-weight: 200;
+    header {
+        background: $color_2;
+        color: $white;
+        border-bottom: 2px solid $color_1;
+        padding: $padding/2 0;
+        h1 {
+            margin: 0;
+            line-height: 1em;
+        }
+    }
+    .demo_wrapper {
+        width: 80%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    
+    .demo_bigtitle {
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+    
+    .demo_title {
+        font-size: 3.5em;
+    }
+}
+
+.demo-tab {
+    tbody {
+        tr {
+            td {
+                &:nth-child(1) {
+                    font-weight: 700;
+                }
+                &:nth-child(2) {
+                    font-style: italic;
+                }
+                &:nth-child(3) {
+                    text-transform: uppercase;
+                }
+            }
+            
+        }
+    }
+}

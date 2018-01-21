@@ -18,7 +18,7 @@
             "sass": "vendors/bootstrap/bootstrap.scss",
             "js": {
                 "src": "node_modules/bootstrap/dist/js/",
-                "dest": "js/vendors/bootstrap/"
+                "dest": "js/vendor/bootstrap/"
             }
         },
         "fontawesome": {
@@ -46,10 +46,6 @@
             "src": "node_modules/animate.css/animate.css",
             "dest": "sass/vendors/animate.scss",
             "sass": "vendors/animate.scss"
-        },
-        "html5boilerplate": {
-            "src": "node_modules/html5-boilerplate-npm/js/",
-            "dist": "js/"
         },
         "popper": {
             "src": "node_modules/popper.js/dist/",

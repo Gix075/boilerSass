@@ -37,6 +37,9 @@ All vendors package are managed by NPM.
 
 ### History
 
+#### version 1.7.2
+* HTML5 Boilerplate manually updated to v6.0.1 and removed from NPM control
+
 #### version 1.7.1
 * Font Weight helper classes and variables added to _typography.scss and _variables.scss
 

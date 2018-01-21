@@ -1,0 +1,39 @@
+body {
+  font-family: "Barlow", Helvetica, Arial, sans-serif;
+  padding-top: 75px;
+}
+
+hr.section-separator {
+  margin: 5rem 0 0 0;
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+}
+
+.bg-dark {
+  background-color: #312b2c !important;
+}
+
+a.btn {
+  color: #fff;
+}
+
+.navbar-brand {
+  width: 100px;
+}
+
+.documentation__page-wrapper .documentation__page-section {
+  padding: 5rem 1.5rem 0;
+}
+.documentation__page-wrapper .documentation__page-section.top-section {
+  background: #231F20;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+.documentation__page-wrapper .documentation__page-section.top-section svg {
+  width: 20%;
+}
+
+/*# sourceMappingURL=documentation.css.map */

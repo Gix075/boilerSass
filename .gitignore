@@ -57,6 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
-
+_index.html
+demo.html
 sass/boilerSass_dev.scss
 .sass-cache

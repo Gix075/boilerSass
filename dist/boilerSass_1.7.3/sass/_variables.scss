@@ -1,0 +1,269 @@
+/*  
+ *  ***************************************************
+ *  boilerSASS
+ *  ***************************************************
+ *  Simple SASS Boilerplate based on HTML5 Boilerplate 
+ *  ***************************************************
+
+ *  VARIABLES FILE
+*/
+
+// =================================
+// SIZES VARS
+// =================================
+
+$space: 40px;
+$padding: $space;
+$margin: $space;
+
+// =================================
+// BREKPOINTS
+// =================================
+$breakpoint_phone: 600px;
+$breakpoint_tablet: 768px; 
+$breakpoint_desktop_small: 1024px; 
+$breakpoint_desktop: 1280px; 
+
+$bp_phone: $breakpoint_phone;
+$bp_tablet: $breakpoint_tablet; 
+$bp_desktop_small: $breakpoint_desktop_small; 
+$bp_desktop: $breakpoint_desktop_small; 
+
+
+// =================================
+// ALL COLORS
+// =================================
+$red: red;
+$green: green;
+$yellow: yellow;
+$blue: blue;
+$blu: $blue;
+$orange: orange;
+$purple: purple;
+$violet: violet;
+$magenta: magenta;
+$cyan: cyan;
+
+// =================================
+// COLORS PALETTE
+// =================================
+
+$color_1: #2C4149;
+$color_1_hover: lighten($color_1,15%);
+
+$color_2: #5C6F77;
+$color_2_hover: lighten($color_2,15%);
+
+$color_3: #B1C5CE;
+$color_3_hover: lighten($color_3,15%);
+
+$color_4: #E0F5FF;
+$color_4_hover: lighten($color_4,15%);
+
+$color_5: #EFF6F9;
+$color_5_hover: lighten($color_5,15%);
+
+
+// =================================
+// GRAYSCALE
+// =================================
+
+
+$white: #fff;
+$black: #000000;
+$gray_extra_light: lighten($black,85%);
+$gray_light: lighten($black,75%);
+$gray: lighten($black,50%);
+$gray_middle: lighten($black,35%);
+$gray_dark: lighten($black,25%);
+$gray_extra_dark: lighten($black,15%);
+
+
+// =================================
+// GLOBALS VARS
+// =================================
+
+$body_margin: 0;
+$body_padding: 0;
+
+$hr_height: 1px;
+$hr_border_width: 1px;
+$hr_border_style: solid;
+$hr_border_color: $gray_extra_light;
+$hr_margin_top: $space;
+$hr_margin_bottom: $space;
+
+
+
+// -------- Default Links 
+
+$link_color: $color_3;
+$link_color_hover: $color_3_hover;
+$link_decoration: none;
+$link_decoration_hover: none;
+
+$link_color_active: $color_3;
+$link_decoration_active: none;
+
+$link_color_visited: $color_3;
+$link_decoration_visited: none;
+
+$link_color_focus: $color_3;
+$link_decoration_focus: none;
+$link_outline_focus: none;
+
+// =================================
+// TYPOGRAPHY VARS
+// =================================
+
+$text_selection_bgcolor: $gray_extra_light;
+$text_selection_textshadow: none;
+
+// FONTS
+// **************************
+
+// ---- Base Font
+$font_base: Helvetica, Arial, sans-serif;
+$font_base_color: $gray_extra_dark;
+$font_base_size: 16px;
+$font_base_small_size: 0.8em;
+$font_base_weight: 400;
+$font_base_strong_weight: 700;
+$font_base_lineheight: 1.2em;
+
+// ---- Custom Fonts
+$font_custom_1: "Open Sans", $font_base;
+$font_custom_2: "Montserrat", $font_base;
+$font-icon-1: "FontAwesome";
+$font-icon-2: "FontAwesome";
+
+// ---- HTML/BODY Font
+$body_font_family: $font_custom_2;
+
+// ---- Font sizes
+$font_mini: 0.5em;
+$font_smaller: 0.8em;
+$font_small: 0.7em;
+$font_larger: 1.3em;
+$font_large: 1.5em;
+$font_big: 2em;
+
+// ---- Font weight
+$font_weight_thin: 100;
+$font_weight_extralight: 200;
+$font_weight_light: 300;
+$font_weight_regular: 400;
+$font_weight_medium: 500;
+$font_weight_semibold: 600;
+$font_weight_bold: 700;
+$font_weight_extrabold: 800;
+$font_weight_dark: 900;
+
+// PARAGRAPHS
+$p_margin: 0 0 $space 0;
+$p_padding: 0;
+$p_size: inherit;
+$p_color: inherit;
+$p_lineheight: 1.4em;
+
+// LISTS
+
+// ---- Unordered List
+$ul_list_style_type: inherit;
+$ul_margin: 0 0 $space 0;
+$ul_padding: 0 0 0 $space;
+
+// ---- Ordered List
+$ol_margin: 0;
+$ol_padding: 0 0 0 $space;
+
+$list_li_lineheight: $p_lineheight;
+$list_li_margin: 0 0 $space/2 0;
+$list_li_padding: 0;
+
+// HEADLINES
+// **************************
+
+$h_default_margin: 0 0 1em 0;
+$h_default_padding: 0;
+$h_default_small_color: $gray_middle;
+$h_default_small_size: 0.5em;
+$h_default_lineheight: 1em;
+$h_default_fontweight: 700;
+
+$h_default_font: inherit;
+
+// ----- H1
+$h1_font: $h_default_font;
+$h1_size: 2.2em;
+$h1_color: inherit;
+$h1_fontwheigth: $h_default_fontweight;
+$h1_small_size: $h_default_small_size;
+$h1_small_color: $h_default_small_color;
+$h1_margin: $h_default_margin;
+$h1_padding: $h_default_padding;
+
+// ----- H2
+$h2_font: $h_default_font;
+$h2_size: 2em;
+$h2_color: inherit;
+$h2_fontwheigth: $h_default_fontweight;
+$h2_small_size: $h_default_small_size;
+$h2_small_color: $h_default_small_color;
+$h2_margin: $h_default_margin;
+$h2_padding: $h_default_padding;
+
+// ----- H3
+$h3_font: $h_default_font;
+$h3_size: 1.8em;
+$h3_color: inherit;
+$h3_fontwheigth: $h_default_fontweight;
+$h3_small_size: $h_default_small_size;
+$h3_small_color: $h_default_small_color;
+$h3_margin: $h_default_margin;
+$h3_padding: $h_default_padding;
+
+// ----- H4
+$h4_font: $h_default_font;
+$h4_size: 1.5em;
+$h4_color: inherit;
+$h4_fontwheigth: $h_default_fontweight;
+$h4_small_size: $h_default_small_size;
+$h4_small_color: $h_default_small_color;
+$h4_margin: $h_default_margin;
+$h4_padding: $h_default_padding;
+
+// ----- H5
+$h5_font: $h_default_font;
+$h5_size: 1.3em;
+$h5_color: inherit;
+$h5_fontwheigth: $h_default_fontweight;
+$h5_small_size: $h_default_small_size;
+$h5_small_color: $h_default_small_color;
+$h5_margin: $h_default_margin;
+$h5_padding: $h_default_padding;
+
+// ----- H6
+$h6_font: $h_default_font;
+$h6_size: 1.2em;
+$h6_color: inherit;
+$h6_fontwheigth: $h_default_fontweight;
+$h6_small_size: $h_default_small_size;
+$h6_small_color: $h_default_small_color;
+$h6_margin: $h_default_margin;
+$h6_padding: $h_default_padding;
+
+
+$table_border: 1px solid $color_3; // for tab-bordered class only
+$table_margin: 0 0 $margin/2 0;
+$table_cell_padding: $padding/4;
+$table_head_color: inherit;
+$table_head_background: transparent;
+$table_head_fontsize: 1.2em;
+
+$table_zebra_odd_color: inherit;
+$table_zebra_odd_background: $color_5;
+$table_zebra_even_color: inherit;
+$table_zebra_even_background: transparent;
+
+

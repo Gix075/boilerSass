@@ -1,0 +1,238 @@
+/*  
+ *  ***************************************************
+ *  boilerSASS
+ *  ***************************************************
+ *  Simple SASS Boilerplate based on HTML5 Boilerplate 
+ *  ***************************************************
+
+ *  THYPOGRAPHY
+*/
+
+// Probably you can modify this style simply editing the "_variables.scss" and "_mixins.scss" files
+
+
+/* ********************************** */
+/* HEADINGS */
+/* ********************************** */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $h1_font;
+    padding: $h1_padding;
+    margin: $h1_margin;
+    line-height: $h_default_lineheight;
+    font-weight: $h_default_fontweight;
+    small {
+        color: $h1_small_color;
+        font-size: $h1_small_size;
+    }
+}
+
+h1,
+.h1 {
+    font-family: $h1_font;
+    font-size: $h1_size;
+    font-weight: $h1_fontwheigth;
+    color: $h1_color;
+    padding: $h1_padding;
+    margin: $h1_margin;
+    small {
+        color: $h1_small_color;
+        font-size: $h1_small_size;
+    }
+}
+
+h2,
+.h2 {
+    font-family: $h2_font;
+    font-size: $h2_size;
+    font-weight: $h2_fontwheigth;
+    color: $h2_color;
+    padding: $h2_padding;
+    margin: $h2_margin;
+    small {
+        color: $h2_small_color;
+        font-size: $h2_small_size;
+    }
+}
+
+h3,
+.h3 {
+    font-family: $h3_font;
+    font-size: $h3_size;
+    font-weight: $h3_fontwheigth;
+    color: $h3_color;
+    padding: $h3_padding;
+    margin: $h3_margin;
+    small {
+        color: $h3_small_color;
+        font-size: $h3_small_size;
+    }
+}
+
+h4,
+.h4 {
+    font-family: $h4_font;
+    font-size: $h4_size;
+    font-weight: $h4_fontwheigth;
+    color: $h4_color;
+    padding: $h4_padding;
+    margin: $h4_margin;
+    small {
+        color: $h4_small_color;
+        font-size: $h4_small_size;
+    }
+}
+
+h5,
+.h5 {
+    font-family: $h5_font;
+    font-size: $h5_size;
+    font-weight: $h5_fontwheigth;
+    color: $h5_color;
+    padding: $h5_padding;
+    margin: $h5_margin;
+    small {
+        color: $h5_small_color;
+        font-size: $h5_small_size;
+    }
+}
+
+h6,
+.h6 {
+    font-family: $h6_font;
+    font-size: $h6_size;
+    font-weight: $h6_fontwheigth;
+    color: $h6_color;
+    padding: $h6_padding;
+    margin: $h6_margin;
+    small {
+        color: $h6_small_color;
+        font-size: $h6_small_size;
+    }
+}
+
+/* ********************************** */
+/* PARAGRAPHS */
+/* ********************************** */
+p,
+.p {
+    font-size: $p_size;
+    color: $p_color;
+    line-height: $p_lineheight;
+    padding: $p_padding;
+    margin: $p_margin;
+}
+
+/* ********************************** */
+/* LISTS */
+/* ********************************** */
+
+ul {
+    list-style-type: ul_list_style_type;
+    padding: $ul_padding;
+    margin: $ul_margin;
+}
+
+ol {
+    padding: $ol_padding;
+    margin: $ol_margin;
+}
+
+ul,ol {
+    li {
+        margin: list_li_margin;
+        padding: list_li_padding;
+        line-height: list_li_lineheight;
+    }
+}
+
+
+/* ********************************** */
+/* FONT UTILITIES */
+/* ********************************** */
+
+.font-mini {
+    font-size: $font_mini;
+}
+
+.font-small {
+    font-size: $font_small;
+}
+
+.font-smaller {
+    font-size: $font_smaller;
+}
+
+.font-larger {
+    font-size: $font_larger;
+}
+
+.font-large {
+    font-size: $font_large;
+}
+
+.font-big {
+    font-size: $font_big;
+}
+
+.centered-txt {
+    text-align: center;
+}
+
+.right-txt {
+    text-align: right;
+}
+
+.left-txt {
+    text-align: left;
+}
+
+.font-thin {
+    font-weight: $font_weight_thin;
+}
+
+.font-extralight,
+.font-extra-light {
+    font-weight: $font_weight_extralight;
+}
+
+.font-light {
+    font-weight: $font_weight_light;
+}
+
+.font-regular {
+    font-weight: $font_weight_regular;
+}
+
+.font-medium {
+    font-weight: $font_weight_medium;
+}
+
+.font-semibold,
+.font-semibold {
+    font-weight: $font_weight_semibold;
+}
+
+.font-bold {
+    font-weight: $font_weight_bold;
+}
+
+.font-extrabold,
+.font-extrabold {
+    font-weight: $font_weight_extrabold;
+}
+
+.font-black {
+    font-weight: $font_weight_black;
+}

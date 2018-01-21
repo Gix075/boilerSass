@@ -3,180 +3,103 @@ module.exports = function (grunt) {
     grunt.initConfig({
         
         pkg: grunt.file.readJSON('package.json'),
-        params: grunt.file.readJSON('config.json'),
         
-        'string-replace': {
-            bootstrap: {
-                files: {
-                    '<%= params.files.sass %>': '<%= params.files.sass %>'
-                },
-                options: {
-                    replacements: [
-                        {
-                            pattern: "// {{BOOTSTRAP}}",
-                            replacement: "@import '<%= params.vendors.bootstrap.sass %>';"
-                        }
-                    ]
-                }
-            },
-            fontawesome: {
-                files: {
-                    '<%= params.files.sass %>': '<%= params.files.sass %>'
-                },
-                options: {
-                    replacements: [
-                        {
-                            pattern: "// {{FONTAWESOME}}",
-                            replacement: "@import '<%= params.vendors.fontawesome.sass %>';"
-                        }
-                    ]
-                }
-            },
-            materialicons: {
-                files: {
-                    '<%= params.files.sass %>': '<%= params.files.sass %>'
-                },
-                options: {
-                    replacements: [
-                        {
-                            pattern: "// {{MATERIALICONS}}",
-                            replacement: "@import '<%= params.vendors.materialicons.sass %>';"
-                        }
-                    ]
-                }
-            },
-            eleganticons: {
-                files: {
-                    '<%= params.files.sass %>': '<%= params.files.sass %>'
-                },
-                options: {
-                    replacements: [
-                        {
-                            pattern: "// {{ELEGANTICONS}}",
-                            replacement: "@import '<%= params.vendors.eleganticons.sass %>';"
-                        }
-                    ]
-                }
-            },
-            normalize: {
-                files: {
-                    '<%= params.files.sass %>': '<%= params.files.sass %>'
-                },
-                options: {
-                    replacements: [
-                        {
-                            pattern: "// {{NORMALIZE}}",
-                            replacement: "@import '<%= params.vendors.normalize.sass %>';"
-                        }
-                    ]
-                }
-            },
-            animate: {
-                files: {
-                    '<%= params.files.sass %>': '<%= params.files.sass %>'
-                },
-                options: {
-                    replacements: [
-                        {
-                            pattern: "// {{ANIMATE}}",
-                            replacement: "@import '<%= params.vendors.animate.sass %>';"
-                        }
-                    ]
-                }
-            }
-        },
+        
         
         copy: {
             
-            bootstrap: {
+            html5boilerplate: {
                 files: [
                     {
-                        expand: true,
-                        cwd: '<%= params.vendors.bootstrap.src %>',
-                        src: ['**'],
-                        dest: '<%= params.vendors.bootstrap.dest %>'
+                        src: '<%= pkg.src %>/html5-boilerplate/404.html',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/404.html'
+                    },
+                    {
+                        src: '<%= pkg.src %>/html5-boilerplate/browserconfig.xml',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/browserconfig.xml'
+                    },
+                    {
+                        src: '<%= pkg.src %>/html5-boilerplate/humans.txt',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/humans.txt'
+                    },
+                    {
+                        src: '<%= pkg.src %>/html5-boilerplate/robots.txt',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/robots.txt'
+                    },
+                    {
+                        src: '<%= pkg.src %>/html5-boilerplate/site.webmanifest',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/site.webmanifest'
                     },
                     {
                         expand: true,
-                        cwd: '<%= params.vendors.bootstrap.js.src %>',
+                        cwd: '<%= pkg.src %>/html5-boilerplate/js',
                         src: ['**'],
-                        dest: '<%= params.vendors.bootstrap.js.dest %>'
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/js/'
                     }
                 ]
             },
-            fontawesome: {
+            boilersass: {
                 files: [
                     {
-                        expand: true,
-                        cwd: '<%= params.vendors.fontawesome.src %>',
-                        src: ['**'],
-                        dest: '<%= params.vendors.fontawesome.dest %>'
+                        src: '<%= pkg.src %>/tile-wide.png',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/tile-wide.png'
+                    },
+                    {
+                        src: '<%= pkg.src %>/tile.png',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/tile.png'
+                    },
+                    {
+                        src: '<%= pkg.src %>/favicon.ico',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/favicon.ico'
+                    },
+                    {
+                        src: '<%= pkg.src %>/icon.png',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/icon.png'
                     },
                     {
                         expand: true,
-                        cwd: '<%= params.vendors.fontawesome.fonts %>',
+                        cwd: '<%= pkg.src %>/css',
                         src: ['**'],
-                        dest: 'fonts/'
-                    }
-                ]
-            },
-            materialicons: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= params.vendors.materialicons.fonts %>',
-                        src: ['**'],
-                        dest: 'fonts/'
-                    }
-                ]
-            },
-            eleganticons: {
-                files: [
-                    {
-                        src: '<%= params.vendors.eleganticons.src %>',
-                        dest: '<%= params.vendors.eleganticons.dest %>'
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/css/'
                     },
                     {
                         expand: true,
-                        cwd: '<%= params.vendors.eleganticons.fonts %>',
+                        cwd: '<%= pkg.src %>/sass',
                         src: ['**'],
-                        dest: 'fonts/'
-                    }
-                ]
-            },
-            animate: {
-                files: [
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/sass/'
+                    },
                     {
-                        src: '<%= params.vendors.animate.src %>',
-                        dest: '<%= params.vendors.animate.dest %>'
+                        src: '<%= pkg.src %>/doc/index.html',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/doc/index.html'
+                    },
+                    {
+                        src: '<%= pkg.src %>/doc/documentation.html',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/doc/documentation.html'
+                    },
+                    {
+                        src: '<%= pkg.src %>/doc/documentation.css',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/doc/documentation.css'
+                    },
+                    {
+                        src: '<%= pkg.src %>/index.html',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/index.html'
+                    },
+                    {
+                        src: '<%= pkg.src %>/Gruntfile.js',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/Gruntfile.js'
+                    },
+                    {
+                        src: '<%= pkg.src %>/package.json',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/package.json'
+                    },
+                    {
+                        src: '<%= pkg.src %>/config.json',
+                        dest: '<%= pkg.dist %>/boilerSass_<%= pkg.version %>/config.json'
                     }
                 ]
             }
-        },
-        
-        processhtml: {
-            options: {},
-            bootstrap: {
-                files: {
-                    'index.html': ['index.html']
-                } 
-            }
-        }, 
-        
-        sass: {  
-            dist: { 
-                options: { 
-                    style: 'expanded'
-                },
-                files: { 
-                    '<%= params.files.css %>': '<%= params.files.sass %>'
-                }
-            }
-        },
-        watch: {
-            files: ['sass/**/*.scss'],
-            tasks: ['sass_compile']
         }
+        
     });
     
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -186,71 +109,13 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-processhtml');
     
     // Developing Tasks
-    grunt.registerTask('sass_compile', ['sass']);
-    grunt.registerTask('default', ['sass','watch']);
-    grunt.registerTask('dev', ['sass','watch']);
+    grunt.registerTask('default', ['message']);
+    grunt.registerTask('dist', ['copy']);
     
     
     // Install Tasks
-    grunt.registerTask('install', function() {
-        
-        params = grunt.file.readJSON('config.json');
-        
-        if(!params) {
-            grunt.fatal('ERROR: Install needs config.json file');
-        } else {
-            
-            // Bootstrap
-            if (params.install.bootstrap === true) {
-                grunt.task.run([
-                    'copy:bootstrap',
-                    'string-replace:bootstrap',
-                    'processhtml:bootstrap'
-                ]);
-            }  
-            
-            // FontAwesome
-            if (params.install.fontawesome === true) {
-                grunt.task.run([
-                    'copy:fontawesome',
-                    'string-replace:fontawesome'
-                ]);
-            }
-            
-            // Material Design Icons
-            if (params.install.materialicons === true) {
-                grunt.task.run([
-                    'copy:materialicons',
-                    'string-replace:materialicons'
-                ]);
-            }
-            
-            // Elegant Icons
-            if (params.install.eleganticons === true) {
-                grunt.task.run([
-                    'copy:eleganticons',
-                    'string-replace:eleganticons'
-                ]);
-            }
-            
-            // Normalize
-            if (params.install.normalize === true) {
-                grunt.task.run([
-                    'string-replace:normalize'
-                ]);
-            }
-            
-            // Animate
-            if (params.install.animate === true) {
-                grunt.task.run([
-                    'copy:animate',
-                    'string-replace:animate'
-                ]);
-            }
-            
-        }
-        
-        
+    grunt.registerTask('message', function() {
+        grunt.fatal('only DIST task is available!');
     });
 
 };
