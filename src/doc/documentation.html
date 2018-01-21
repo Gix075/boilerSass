@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content=" An easy way to start new web project with a SASS boilerplate">
+    <meta name="author" content="Gix075">
+    <link rel="icon" href="">
+
+    <title>boilerSASS | An easy way</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Barlow:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="documentation.css">
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html" title="Home">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 200 100" style="enable-background:new 0 0 200 100;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#FFFFFF;}
+                    .st1{fill:#FFFFFF;}
+                    .st2{font-family:'HoboStd';}
+                    .st3{font-size:34.9364px;}
+                    .st6{font-size:53.9927px;fill:#FFFFFF;}
+                </style>
+                <g id="Livello_1">
+                    <text id="XMLID_11_" transform="matrix(1 0 0 1 12.5408 37.0646)" class="st1 st2 st3">boiler</text>
+                    <text id="XMLID_10_" transform="matrix(1 0 0 1 3.0078 89.7532)" class="st1 st2 st6">SASS</text>
+                </g>
+            </svg>
+
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" title="home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/Gix075/boilerSass/releases" target="_blank" title="Download">Download</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="documentation.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#installation" title="Intsallation">Intsallation</a>
+                        <a class="dropdown-item" href="#usage" title="Usage">Usage</a>
+                        <a class="dropdown-item" href="#customize" title="Customize">Customize</a>
+                        <a class="dropdown-item" href="#variables" title="Variables">Variables</a>
+                        <a class="dropdown-item" href="#mixins" title="Mixins">Mixins</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/Gix075/boilerSass" target="_blank" title="GitHub">GitHub</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="documentation__page-wrapper">
+        
+        <div class="documentation__page-section top-section">
+            <h1>boilerSASS | Documentation</h1>
+        </div>
+        
+        <section id="installation" class="documentation__page-section">
+            <div class="container">
+                <h2>How To Install</h2>
+                <p class="marg-top font-medium">
+                    You can choose between two different kind of installation: only boilerSASS, or boilerSASS with some third party libraries.<br>
+                    In order to install only BoilerSASS, download the package and follow this steps:<br>
+                </p>
+                
+                <ul>
+                    
+                    <li>
+                        <strong>Install NPM components</strong><br>
+                        Open you system console and access BoilerSASS directory on your desktop<br>
+                        the type <code>$ npm install</code>
+                    </li>
+                    
+                    <li>
+                        <strong>Using SASS</strong><br>
+                        Once BoilerSASS is installed you can start coding Sass<br>
+                        Type <code>$ Grunt</code> on your console to first BoilerSASS compile and to start the <em>watch</em> task that autocomile SASS files when changed.
+                    </li>
+
+                </ul>
+                
+                <p class="marg-top font-medium">
+                    If you want add some libraries follow this steps:<br>
+                </p>
+                
+                <ul>
+                    
+                    <li>
+                        <strong>Install NPM components</strong><br>
+                        Open you system console and access BoilerSASS directory on your desktop<br>
+                        the type <code>$ npm install</code>
+                    </li>
+                    
+                    <li>
+                        <strong>Configure package</strong><br>
+                        Open the file <code>config.json</code> and set as true the libraries that you want include on your sass project.
+                    </li>
+                    
+                    <li>
+                        <strong>Install vendors libs</strong><br>
+                        Open you system console and access BoilerSASS directory on your desktop<br>
+                        then type <code>$ Grunt install</code>
+                    </li>
+                    
+                    <li>
+                        <strong>Using SASS</strong><br>
+                        Once BoilerSASS is installed you can start coding Sass<br>
+                        Type <code>$ Grunt</code> on your console to first BoilerSASS compile and to start the <em>watch</em> task that autocomile SASS files when changed.
+                    </li>
+
+                </ul>
+                
+                <p class="marg-top font-medium">
+                    Now you are ready!
+                </p>
+            </div>
+        </section>
+        
+        <hr class="section-separator"> 
+        
+        <section id="usage" class="documentation__page-section">
+            <div class="container">
+                <h2>Usage</h2>
+                <p>
+                    Using boilerSASS in very simple. As HTML5 Boilerplate it provides all basical files for a new web project.<br>
+                    Inside the package you can find the html, javascript and sass file that you can customize as you need.
+                </p>
+                <p>
+                    For a first massive customization you can edit the file <strong>sass/_variables.css</strong> according your design, then you can place your style inside <strong>sass/_custom.scss</strong> file.
+                    <br>You can compile sass files using Grunt that is included in boilerSASS. Launch sass compile and watch task simply typing <code>$Grunt</code> on your console.
+                </p>
+            </div>
+        </section>
+        
+        <hr class="section-separator"> 
+        
+        <section id="usage" class="documentation__page-section">
+            <div class="container">
+                <h2>Customization</h2>
+                <p>By default, boilerSASS provides a <em>_custom.scss</em> partial file for place your sass style, but you can add any partials files you want.</p>
+                <h3>Add a partial file</h3>
+                <p> 
+                    Create a new file inside <strong>sass/partials</strong> directory and name it like <strong>_newpartial.scss</strong>, the open <strong>sass/boilerSass.scss</strong> and find the row
+                    <br><code>@import 'custom';</code>
+                    <br>and append it a new row to include the new partials
+                    <br><code>@import 'partials/newpartial';</code>
+                </p>
+            </div>
+        </section>
+        
+        <hr class="section-separator">
+        
+        <section id="variables" class="documentation__page-section">
+            <div class="container">
+                <h2>boilerSASS | Variables</h2>
+                <p class="lead">All available sass variables</p>
+                <table class="table table-striped">
+                    
+                    <thead>
+                        <tr>
+                            <th>Variable Name</th>
+                            <th>Desc</th>
+                            <th>Group</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        
+                        <!-- SIZES -->
+                        <!-- ========================================= -->
+                        <tr>
+                            <td>$space</td>
+                            <td>Default space, used for margins and paddings</td>
+                            <td>Sizes</td>
+                        </tr>
+                        <tr>
+                            <td>$margin</td>
+                            <td>Default margin, this property use the $space value as default</td>
+                            <td>Sizes</td>
+                        </tr>
+                        <tr>
+                            <td>$padding</td>
+                            <td>Default padding, this property use the $space value as default</td>
+                            <td>Sizes</td>
+                        </tr>
+                        
+                        
+                        <!-- COLORS -->
+                        <!-- ========================================= -->
+                        <tr>
+                            <td>
+                                $color_1 $color_1_hover<br>
+                                $color_2 $color_2_hover<br>
+                                $color_3 $color_3_hover<br>
+                                $color_4 $color_4_hover<br> 
+                            </td>
+                            <td>Custom colors. This color aren't used on default boilerSASS setting</td>
+                            <td>Colors</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                $black<br>
+                                $white<br>
+                                $gray_extra_light<br>
+                                $gray_light<br>
+                                $gray_middlle<br>
+                                $gray_dark<br>
+                                $gray_extra_dark
+                            </td>
+                            <td>Grayscale used on default boilerSASS setting</td>
+                            <td>Colors</td>
+                        </tr>
+                        
+                        <!-- DOM ELEMENTS -->
+                        <!-- ========================================= -->
+                        <tr>
+                            <td>
+                                $body_margin<br>
+                                $body_padding
+                            </td>
+                            <td>&lt;BODY&gt; settings</td>
+                            <td>Dom Elements</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                $hr_height<br>
+                                $hr_border_width<br>
+                                $hr_border_style<br>
+                                $hr_border_color<br>
+                                $hr_margin_top<br>
+                                $hr_margin_bottom
+                            </td>
+                            <td>HR settings</td>
+                            <td>Dom Elements</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                $link_color<br>
+                                $link_color_hover<br>
+                                $link_decoration<br>
+                                $link_decoration_hover<br>
+                                <br>
+                                $link_color_active<br>
+                                $link_decoration_active<br>
+                                <br>
+                                $link_color_visited<br>
+                                $link_decoration_visited<br>
+                                <br>
+                                $link_color_focus<br>
+                                $link_decoration_focus<br>
+                                $link_outline_focus
+                            </td>
+                            <td>Default link settings</td>
+                            <td>Dom Elements</td>
+                        </tr>
+                        
+                        
+                        <tr>
+                            <td>
+                                $font_base<br>
+                                $font_base_color<br>
+                                $font_base_size<br>
+                                $font_base_small_size<br>
+                                $font_base_weight<br>
+                                $font_base_strong_weight<br>
+                                $font_base_lineheight
+                            </td>
+                            <td>Default font settings as color and STRONG weight and &lt;SMALL&gt; font size and so on</td>
+                            <td>Typography</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                $font_custom_1<br>
+                                $font_custom_2
+                            </td>
+                            <td>
+                                Custom font families<br>
+                                <code>
+                                    $font_custom_1: "Open Sans", $font_base;<br>
+                                    $font_custom_2: "Roboto Condensed", $font_base;
+                                </code>
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                $body_font_family
+                            </td>
+                            <td>
+                                Default &lt;BODY&gt;,&lt;HTML&gt; font family
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                $font_mini<br>
+                                $font_smaller<br>
+                                $font_small<br>
+                                $font_larger<br>
+                                $font_large<br>
+                                $font_big 
+                            </td>
+                            <td>
+                                Font size variations
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                $p_margin<br>
+                                $p_padding<br>
+                                $p_size<br>
+                                $p_color<br>
+                                $p_lineheight
+                            </td>
+                            <td>
+                                Default paragraph &lt;P&gt; settings
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                $ul_list_style_type<br>
+                                $ul_margin<br>
+                                $ul_padding
+                            </td>
+                            <td>
+                                Default unordered list &lt;OL&gt; settings
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                $h_default_margin<br>
+                                $h_default_padding<br>
+                                $h_default_small_color<br>
+                                $h_default_small_size<br>
+                                $h_default_lineheight<br>
+                                $h_default_fontweight<br>
+                                $h_default_font
+                            </td>
+                            <td>
+                                Default Headlines settings<br>
+                                This settings are valid for all headlines
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+                        
+                        
+                        <tr>
+                            <td>
+                                $h1_font<br>
+                                $h1_size<br>
+                                $h1_color<br>
+                                $h1_fontwheigth<br>
+                                $h1_small_size<br>
+                                $h1_small_color<br>
+                                $h1_margin<br>
+                                $h1_padding
+                            </td>
+                            <td>
+                                Default Single Headlines (H1 on this example) settings<br>
+                                All single headlines are available.
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+                        
+                        
+                    </tbody>
+                    
+                </table>
+                
+            </div>
+            <!-- /.container -->
+        </section>
+        
+        <hr class="section-separator">
+        
+        <section id="mixins" class="documentation__page-section">
+
+            <div class="container">
+                    <h2>boilerSASS | Mixins</h2>
+                    <p class="lead">All available mixins</p>
+
+                <table class="table table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>Mixin</th>
+                            <th>Desc</th>
+                            <th>Group</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <!-- SIZES -->
+                        <!-- ========================================= -->
+                        <tr>
+                            <td>button()</td>
+                            <td>
+                                <p>
+                                    Returns a button with default colors. <strong>Params:</strong> no params
+                                </p>
+                            </td>
+                            <td>Buttons</td>
+                        </tr>
+                        <tr>
+                            <td>button-color($background,$color)</td>
+                            <td>
+                                <p>Returns a button with custom colors. <strong>Params:</strong> $background,$color</p>
+                            </td>
+                            <td>Buttons</td>
+                        </tr>
+                        <tr>
+                            <td>button-icon($icon)</td>
+                            <td>
+                                <p>Returns a button with a custom icon. <strong>Params:</strong> $icon</p>
+                                <p><strong>Note:</strong> $icon must be the font code of the icon tha you want show. The icon font family is defined on variable $font-icon-1 in _variables.scss</p>
+                            </td>
+                            <td>Buttons</td>
+                        </tr>
+                        <tr>
+                            <td>button-icon-left()</td>
+                            <td>
+                                <p>Aligns icons to the left. This mixin must be used only with button-icon() mixin. "Left" is the default button icon align. <strong>Params:</strong> no params</p>
+                            </td>
+                            <td>Buttons</td>
+                        </tr>
+
+                        <tr>
+                            <td>button-icon-right()</td>
+                            <td>
+                                <p>Aligns icons to the right. This mixin must be used only with button-icon() mixin. <strong>Params:</strong> no params</p>
+                            </td>
+                            <td>Buttons</td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td>resetlist()</td>
+                            <td>
+                                <p>Reset list with no style. <strong>Params:</strong> no params</p>
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+
+                        <tr>
+                            <td>ellipsis()</td>
+                            <td>
+                                <p>Add "..." ellipsis to the text overflow. <strong>Params:</strong> no params</p>
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+
+                        <tr>
+                            <td>place($top,$right,$bottom,$left)</td>
+                            <td>
+                                <p>Add top, right, bottom and left positioning. <strong>Params:</strong> $top,$right,$bottom,$left</p>
+                                <p><strong>Note:</strong> you can use px or %</p>
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+
+                        <tr>
+                            <td>transition( $property, $duration, $style)</td>
+                            <td>
+                                <p>Add a transition with prefixes. <strong>Params:</strong> $property, $duration, $style</p>
+                            </td>
+                            <td>Transitions</td>
+                        </tr>
+
+                        <tr>
+                            <td>transform( $transformProperties )</td>
+                            <td>
+                                <p>Add custom transform properties with prefixes. <strong>Params:</strong> $transformProperties</p>
+                                <p><strong>Note:</strong> $transformProperties must be a CSS3 trasform valid rule</p>
+                            </td>
+                            <td>Transforms</td>
+                        </tr>
+
+                        <tr>
+                            <td>translate ( $x, $y )</td>
+                            <td>
+                                <p>Add custom transform translate properties with prefixes. <strong>Params:</strong> $x,$y</p>
+                                <p><strong>Note:</strong> $x,$y can be a fixed size or a liquid size</p>
+                            </td>
+                            <td>Transforms</td>
+                        </tr>
+
+                        <tr>
+                            <td>translate-50()<br>translate-50X()<br>translate-50Y()</td>
+                            <td>
+                                <p>Add a -50% translate on X and Y axis. <strong>Params:</strong> no params</p>
+                            </td>
+                            <td>Transforms</td>
+                        </tr>
+
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </section>
+        
+    </div>
+
+    
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

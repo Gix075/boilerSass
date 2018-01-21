@@ -1,0 +1,42 @@
+@import "variables";
+
+body {
+    font-family: $font_1;
+    padding-top: 75px;
+}
+
+hr.section-separator {
+    margin: 5rem 0 0 0;
+}
+
+h1,h2,h3 {
+    font-weight: 800;
+    //color: $color_1;
+}
+
+.bg-dark {
+    background-color: $color_1_hover!important;
+}
+
+a.btn {
+    color: $white;
+}
+
+.navbar-brand {
+    width: 100px;
+    //height: 50px;
+}
+.documentation__page-wrapper {
+    .documentation__page-section {
+        padding: $section_padding;
+        &.top-section {
+            background: $color_1;
+            color: #fff;
+            text-align: center;
+            padding: 5rem 1.5rem;
+            svg {
+                width: 20%;
+            }
+        }
+    }
+}
