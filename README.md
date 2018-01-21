@@ -37,6 +37,12 @@ All vendors package are managed by NPM.
 
 ### History
 
+#### version 1.7.3
+* Some Bug Fixed
+* HTML5 Boilerplate project icons replaced
+* New Ditribution Package added: boilerSass_1.7.3.zip
+* Repository structute completely changed
+
 #### version 1.7.2
 * HTML5 Boilerplate manually updated to v6.0.1 and removed from NPM control
 
