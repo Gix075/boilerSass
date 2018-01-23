@@ -329,6 +329,24 @@
                         
                         <tr>
                             <td>
+                                $font_weight_thin<br>
+                                $font_weight_extralight<br>
+                                $font_weight_light<br>
+                                $font_weight_regular<br>
+                                $font_weight_medium<br>
+                                $font_weight_semibold<br>
+                                $font_weight_bold<br>
+                                $font_weight_extrabold<br>
+                                $font_weight_dark
+                            </td>
+                            <td>
+                                Font weight variations
+                            </td>
+                            <td>Typography</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
                                 $p_margin<br>
                                 $p_padding<br>
                                 $p_size<br>
@@ -521,6 +539,28 @@
                             <td>Transforms</td>
                         </tr>
 
+                        <tr>
+                            <td>ratio_[ratio]<br>ratio_custom($padding)</td>
+                            <td>
+                                <p>
+                                    ratio mixin generate a fluid box with permanent ratio. You can use some default ratio or geretate your own with the ratio_custom() mixin.<br>
+                                    <strong>Default Ratios Mixins</strong><br>
+                                    - ratio_16-9<br>
+                                    - ratio_5-3<br>
+                                    - ratio_3-2<br>
+                                    - ratio_1-2<br>
+                                    - ratio_1-1<br>
+                                    <br>
+                                    <strong>Params:</strong> no params<br>
+                                    <strong>Custom Ratio Mixins</strong><br>
+                                    For custom ratio, use <strong>ratio_custom($padding)</strong>;
+                                    <strong>Params:</strong> is the percent of the with that will be used as a box height;<br>
+                                    <strong>Box Content</strong><br>
+                                    The box content must be placed inside a child element that require the mixin: <strong>ratio_content</strong>
+                                </p>
+                            </td>
+                            <td>Element Style</td>
+                        </tr>
 
 
                     </tbody>

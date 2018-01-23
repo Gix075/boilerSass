@@ -139,7 +139,7 @@ p,
 /* ********************************** */
 
 ul {
-    list-style-type: ul_list_style_type;
+    list-style-type: $ul_list_style_type;
     padding: $ul_padding;
     margin: $ul_margin;
 }
@@ -151,9 +151,9 @@ ol {
 
 ul,ol {
     li {
-        margin: list_li_margin;
-        padding: list_li_padding;
-        line-height: list_li_lineheight;
+        margin: $list_li_margin;
+        padding: $list_li_padding;
+        line-height: $list_li_lineheight;
     }
 }
 

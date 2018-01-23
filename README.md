@@ -37,6 +37,11 @@ All vendors package are managed by NPM.
 
 ### History
 
+#### version 1.7.4
+* Bug fixed on src/partials/_typography.scss
+* Some changes to src/package.json
+* Documentation updated
+
 #### version 1.7.3
 * Some Bug Fixed
 * HTML5 Boilerplate project icons replaced
