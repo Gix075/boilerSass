@@ -396,7 +396,7 @@ p,
 /* LISTS */
 /* ********************************** */
 ul {
-  list-style-type: ul_list_style_type;
+  list-style-type: inherit;
   padding: 0 0 0 40px;
   margin: 0 0 40px 0;
 }
@@ -407,9 +407,9 @@ ol {
 }
 
 ul li, ol li {
-  margin: list_li_margin;
-  padding: list_li_padding;
-  line-height: list_li_lineheight;
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 1.4em;
 }
 
 /* ********************************** */
@@ -449,6 +449,45 @@ ul li, ol li {
 
 .left-txt {
   text-align: left;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+.font-extralight,
+.font-extra-light {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold,
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold,
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
 }
 
 /*  
@@ -778,17 +817,25 @@ body {
 
 /*
  * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
   width: 1px;
+  white-space: nowrap;
+  /* 1 */
 }
 
 /*
@@ -799,11 +846,14 @@ body {
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
+  -webkit-clip-path: none;
+  clip-path: none;
   height: auto;
   margin: 0;
   overflow: visible;
   position: static;
   width: auto;
+  white-space: inherit;
 }
 
 /*
@@ -855,13 +905,12 @@ body {
 @media print {
   *,
   *:before,
-  *:after,
-  *:first-letter,
-  *:first-line {
+  *:after {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster:
-       http://www.sanbeiji.com/archives/953 */
+                               http://www.sanbeiji.com/archives/953 */
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -888,6 +937,10 @@ body {
     content: "";
   }
 
+  pre {
+    white-space: pre-wrap !important;
+  }
+
   pre,
   blockquote {
     border: 1px solid #999;
@@ -905,10 +958,6 @@ body {
   tr,
   img {
     page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
   }
 
   p,

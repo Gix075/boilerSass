@@ -37,6 +37,9 @@ All vendors package are managed by NPM.
 
 ### History
 
+#### version 1.7.5
+* Bug fixed on src/partials/_variables.scss
+
 #### version 1.7.4
 * Bug fixed on src/partials/_typography.scss
 * Some changes to src/package.json
