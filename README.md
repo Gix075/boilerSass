@@ -1,5 +1,12 @@
 # boilerSass
 A simple SASS / CSS boilerplate<br>
+
+Based on HTML5 Boilerplate, boilerSASS is an elementary SASS boilerplate for easy webproject setup.
+
+## Basic Style and More
+**boilerSASS** provides a common style for all commons html elements such as: html, body, h*, p, a, ul, ol, img, span, small, form, input, select, textarea and much more.
+You can setup any custom fonts or colors you need and use many useful mixins that make your work faster.
+
 **boilerSASS** is a Grunt ready project, so Grunt is required and you can discover more about it from [https://gruntjs.com](https://gruntjs.com).
 
 **boilerSASS** is a simple SASS Boilerplate useful to start a complete new web project in less than 10 minutes<br>
