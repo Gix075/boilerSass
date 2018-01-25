@@ -71,13 +71,21 @@ $color_5_hover: lighten($color_5,15%);
 
 $white: #fff;
 $black: #000000;
+
 $gray_extra_light: lighten($black,85%);
 $gray_light: lighten($black,75%);
 $gray: lighten($black,50%);
-$gray_middle: lighten($black,35%);
-$gray_dark: lighten($black,25%);
+$gray_middle: lighten($black,30%);
+$gray_dark: lighten($black,20%);
 $gray_extra_dark: lighten($black,15%);
 
+
+//$gray_extra_light: #A2A2A2;
+//$gray_light: #737373;
+//$gray: #5C5C5C;
+//$gray_middle: #454545;
+//$gray_dark: #2E2E2E;
+//$gray_extra_dark: #171717;
 
 // =================================
 // GLOBALS VARS
@@ -86,13 +94,22 @@ $gray_extra_dark: lighten($black,15%);
 $body_margin: 0;
 $body_padding: 0;
 
+// -------- Borders
+
+$border_default_width: 1px;
+$border_default_style: solid;
+$border_default_color: $gray_extra_light;
+$border_color: $border_default_color;
+$border_default: $border_default_width $border_default_style $border_default_color;
+
+// -------- HR
+
 $hr_height: 1px;
 $hr_border_width: 1px;
 $hr_border_style: solid;
 $hr_border_color: $gray_extra_light;
 $hr_margin_top: $space;
 $hr_margin_bottom: $space;
-
 
 
 // -------- Default Links 
@@ -124,7 +141,7 @@ $text_selection_textshadow: none;
 
 // ---- Base Font
 $font_base: Helvetica, Arial, sans-serif;
-$font_base_color: $gray_extra_dark;
+$font_base_color: $gray_dark;
 $font_base_size: 16px;
 $font_base_small_size: 0.8em;
 $font_base_weight: 400;
@@ -159,8 +176,12 @@ $font_weight_bold: 700;
 $font_weight_extrabold: 800;
 $font_weight_black: 900;
 
+// ---- Font style
+$text_important_background: $font_base_color;
+$text_important_color: $white;
+
 // PARAGRAPHS
-$p_margin: 0 0 $space 0;
+$p_margin: 0 0 $space/2 0;
 $p_padding: 0;
 $p_size: inherit;
 $p_color: inherit;
@@ -184,19 +205,20 @@ $list_li_padding: 0;
 // HEADLINES
 // **************************
 
-$h_default_margin: 0 0 1em 0;
+$h_default_margin: 0.5em 0 0.3em 0;
 $h_default_padding: 0;
 $h_default_small_color: $gray_middle;
 $h_default_small_size: 0.5em;
 $h_default_lineheight: 1em;
 $h_default_fontweight: 700;
 
+$h_default_color: inherit;
 $h_default_font: inherit;
 
 // ----- H1
 $h1_font: $h_default_font;
 $h1_size: 2.2em;
-$h1_color: inherit;
+$h1_color: $h_default_color;
 $h1_fontwheigth: $h_default_fontweight;
 $h1_small_size: $h_default_small_size;
 $h1_small_color: $h_default_small_color;
@@ -206,7 +228,7 @@ $h1_padding: $h_default_padding;
 // ----- H2
 $h2_font: $h_default_font;
 $h2_size: 2em;
-$h2_color: inherit;
+$h2_color: $h_default_color;
 $h2_fontwheigth: $h_default_fontweight;
 $h2_small_size: $h_default_small_size;
 $h2_small_color: $h_default_small_color;
@@ -216,7 +238,7 @@ $h2_padding: $h_default_padding;
 // ----- H3
 $h3_font: $h_default_font;
 $h3_size: 1.8em;
-$h3_color: inherit;
+$h3_color: $h_default_color;
 $h3_fontwheigth: $h_default_fontweight;
 $h3_small_size: $h_default_small_size;
 $h3_small_color: $h_default_small_color;
@@ -226,7 +248,7 @@ $h3_padding: $h_default_padding;
 // ----- H4
 $h4_font: $h_default_font;
 $h4_size: 1.5em;
-$h4_color: inherit;
+$h4_color: $h_default_color;
 $h4_fontwheigth: $h_default_fontweight;
 $h4_small_size: $h_default_small_size;
 $h4_small_color: $h_default_small_color;
@@ -236,7 +258,7 @@ $h4_padding: $h_default_padding;
 // ----- H5
 $h5_font: $h_default_font;
 $h5_size: 1.3em;
-$h5_color: inherit;
+$h5_color: $h_default_color;
 $h5_fontwheigth: $h_default_fontweight;
 $h5_small_size: $h_default_small_size;
 $h5_small_color: $h_default_small_color;
@@ -246,7 +268,7 @@ $h5_padding: $h_default_padding;
 // ----- H6
 $h6_font: $h_default_font;
 $h6_size: 1.2em;
-$h6_color: inherit;
+$h6_color: $h_default_color;
 $h6_fontwheigth: $h_default_fontweight;
 $h6_small_size: $h_default_small_size;
 $h6_small_color: $h_default_small_color;

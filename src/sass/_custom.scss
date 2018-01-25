@@ -10,9 +10,19 @@
 
 
 body {
-    font-weight: 200;
-    font-size: 18px;
+    //font-weight: 200;
+    font-size: 16px;
 }
+
+.flexgrid {
+    display: flex;
+    flex-wrap: wrap;
+    .flexgrid-item {
+        flex: 1;
+        padding: $padding;
+    }
+}
+
 .demo {
     font-weight: 200;
     header {

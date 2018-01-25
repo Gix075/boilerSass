@@ -37,6 +37,12 @@ All vendors package are managed by NPM.
 
 ### History
 
+#### version 1.8.0
+* Typography style updated
+* New typography helper classes added
+* New transition easings mixins added
+* New Demo file added (uncompleted)
+
 #### version 1.7.5
 * Bug fixed on src/partials/_variables.scss
 

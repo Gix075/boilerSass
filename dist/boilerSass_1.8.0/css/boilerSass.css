@@ -35,6 +35,8 @@
 */
 /* Links and Buttons */
 /* ============================================== */
+/* TRANSITIONS */
+/* ============================================== */
 /*
  *  ***************************************************
  *  boilerSASS
@@ -54,7 +56,7 @@ body {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: #262626;
+  color: #333333;
   line-height: 1.2em;
 }
 
@@ -168,7 +170,7 @@ strong {
 
 .button {
   display: inline-block;
-  background: #404040;
+  background: #333333;
   color: #fff;
   text-transform: uppercase;
   height: 40px;
@@ -192,7 +194,7 @@ strong {
 }
 .button:hover {
   color: #fff;
-  background: rgba(64, 64, 64, 0.8);
+  background: rgba(51, 51, 51, 0.8);
 }
 .button.small {
   font-size: 1em;
@@ -220,11 +222,11 @@ strong {
   background: rgba(255, 165, 0, 0.8);
 }
 .button.button-yellow {
-  color: #404040;
+  color: #333333;
   background: yellow;
 }
 .button.button-yellow:hover {
-  color: #404040;
+  color: #333333;
   background: rgba(255, 255, 0, 0.8);
 }
 .button.button-green {
@@ -270,7 +272,7 @@ h6,
 .h6 {
   font-family: inherit;
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 0.5em 0 0.3em 0;
   line-height: 1em;
   font-weight: 700;
 }
@@ -286,7 +288,7 @@ h6 small,
 .h4 small,
 .h5 small,
 .h6 small {
-  color: #595959;
+  color: #4d4d4d;
   font-size: 0.5em;
 }
 
@@ -297,11 +299,11 @@ h1,
   font-weight: 700;
   color: inherit;
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 0.5em 0 0.3em 0;
 }
 h1 small,
 .h1 small {
-  color: #595959;
+  color: #4d4d4d;
   font-size: 0.5em;
 }
 
@@ -312,11 +314,11 @@ h2,
   font-weight: 700;
   color: inherit;
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 0.5em 0 0.3em 0;
 }
 h2 small,
 .h2 small {
-  color: #595959;
+  color: #4d4d4d;
   font-size: 0.5em;
 }
 
@@ -327,11 +329,11 @@ h3,
   font-weight: 700;
   color: inherit;
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 0.5em 0 0.3em 0;
 }
 h3 small,
 .h3 small {
-  color: #595959;
+  color: #4d4d4d;
   font-size: 0.5em;
 }
 
@@ -342,11 +344,11 @@ h4,
   font-weight: 700;
   color: inherit;
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 0.5em 0 0.3em 0;
 }
 h4 small,
 .h4 small {
-  color: #595959;
+  color: #4d4d4d;
   font-size: 0.5em;
 }
 
@@ -357,11 +359,11 @@ h5,
   font-weight: 700;
   color: inherit;
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 0.5em 0 0.3em 0;
 }
 h5 small,
 .h5 small {
-  color: #595959;
+  color: #4d4d4d;
   font-size: 0.5em;
 }
 
@@ -372,11 +374,11 @@ h6,
   font-weight: 700;
   color: inherit;
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 0.5em 0 0.3em 0;
 }
 h6 small,
 .h6 small {
-  color: #595959;
+  color: #4d4d4d;
   font-size: 0.5em;
 }
 
@@ -389,7 +391,7 @@ p,
   color: inherit;
   line-height: 1.4em;
   padding: 0;
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
 }
 
 /* ********************************** */
@@ -413,7 +415,42 @@ ul li, ol li {
 }
 
 /* ********************************** */
-/* FONT UTILITIES */
+/* FONT UTILITIES: Alignment */
+/* ********************************** */
+.centered-txt,
+.centered-text,
+.center-txt,
+.center-text {
+  text-align: center;
+}
+
+.right-txt,
+.right-text {
+  text-align: right;
+}
+
+.left-txt,
+.left-text {
+  text-align: left;
+}
+
+/* ********************************** */
+/* FONT UTILITIES: Text Transform */
+/* ********************************** */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* ********************************** */
+/* FONT UTILITIES: Size */
 /* ********************************** */
 .font-mini {
   font-size: 0.5em;
@@ -439,18 +476,9 @@ ul li, ol li {
   font-size: 2em;
 }
 
-.centered-txt {
-  text-align: center;
-}
-
-.right-txt {
-  text-align: right;
-}
-
-.left-txt {
-  text-align: left;
-}
-
+/* ********************************** */
+/* FONT UTILITIES: Font Weight */
+/* ********************************** */
 .font-thin {
   font-weight: 100;
 }
@@ -472,8 +500,8 @@ ul li, ol li {
   font-weight: 500;
 }
 
-.font-semibold,
-.font-semibold {
+.font-semibold
+.font-semi-bold {
   font-weight: 600;
 }
 
@@ -482,12 +510,54 @@ ul li, ol li {
 }
 
 .font-extrabold,
-.font-extrabold {
+.font-extra-bold {
   font-weight: 800;
 }
 
 .font-black {
   font-weight: 900;
+}
+
+/* ********************************** */
+/* FONT UTILITIES: Font Style */
+/* ********************************** */
+.important {
+  background: #333333;
+  color: #fff;
+  padding: 0 0.2em;
+  line-height: 1.2em;
+}
+
+.very-important {
+  background: #333333;
+  color: #fff;
+  font-weight: 700;
+  padding: 0 0.2em;
+  line-height: 1.2em;
+}
+
+.font-italic,
+.italic {
+  font-style: italic;
+}
+
+.font-oblique,
+.oblique {
+  font-style: oblique;
+}
+
+.bold,
+.strong {
+  font-weight: bold;
+}
+
+.bolder,
+.stronger {
+  font-weight: bolder;
+}
+
+.lighter {
+  font-weight: lighter;
 }
 
 /*  
@@ -551,8 +621,16 @@ ul li, ol li {
  *  ***************************************************
 */
 body {
-  font-weight: 200;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.flexgrid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flexgrid .flexgrid-item {
+  flex: 1;
+  padding: 40px;
 }
 
 .demo {

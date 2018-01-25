@@ -27,14 +27,14 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: $h1_font;
-    padding: $h1_padding;
-    margin: $h1_margin;
+    font-family: $h_default_font;
+    padding: $h_default_padding;
+    margin: $h_default_margin;
     line-height: $h_default_lineheight;
     font-weight: $h_default_fontweight;
     small {
-        color: $h1_small_color;
-        font-size: $h1_small_size;
+        color: $h_default_small_color;
+        font-size: $h_default_small_size;
     }
 }
 
@@ -159,9 +159,45 @@ ul,ol {
 
 
 /* ********************************** */
-/* FONT UTILITIES */
+/* FONT UTILITIES: Alignment */
 /* ********************************** */
 
+.centered-txt, 
+.centered-text,
+.center-txt, 
+.center-text {
+    text-align: center;
+}
+.right-txt, 
+.right-text{
+    text-align: right;
+}
+.left-txt, 
+.left-text{
+    text-align: left;
+}
+
+
+/* ********************************** */
+/* FONT UTILITIES: Text Transform */
+/* ********************************** */
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+
+
+/* ********************************** */
+/* FONT UTILITIES: Size */
+/* ********************************** */
 .font-mini {
     font-size: $font_mini;
 }
@@ -186,18 +222,10 @@ ul,ol {
     font-size: $font_big;
 }
 
-.centered-txt {
-    text-align: center;
-}
 
-.right-txt {
-    text-align: right;
-}
-
-.left-txt {
-    text-align: left;
-}
-
+/* ********************************** */
+/* FONT UTILITIES: Font Weight */
+/* ********************************** */
 .font-thin {
     font-weight: $font_weight_thin;
 }
@@ -219,8 +247,8 @@ ul,ol {
     font-weight: $font_weight_medium;
 }
 
-.font-semibold,
-.font-semibold {
+.font-semibold
+.font-semi-bold {
     font-weight: $font_weight_semibold;
 }
 
@@ -229,10 +257,54 @@ ul,ol {
 }
 
 .font-extrabold,
-.font-extrabold {
+.font-extra-bold {
     font-weight: $font_weight_extrabold;
 }
 
 .font-black {
     font-weight: $font_weight_black;
 }
+
+
+/* ********************************** */
+/* FONT UTILITIES: Font Style */
+/* ********************************** */
+.important {
+    background: $text_important_background;
+    color: $text_important_color;
+    padding: 0 0.2em;
+    line-height: 1.2em;
+}
+
+.very-important {
+    background: $text_important_background;
+    color: $text_important_color;
+    font-weight: 700;
+    padding: 0 0.2em;
+    line-height: 1.2em;
+}
+
+.font-italic,
+.italic {
+    font-style: italic;
+}
+
+.font-oblique,
+.oblique {
+    font-style: oblique;
+}
+
+.bold,
+.strong {
+    font-weight: bold;
+}
+
+.bolder,
+.stronger {
+    font-weight: bolder;
+}
+
+.lighter {
+    font-weight: lighter;
+}
+
