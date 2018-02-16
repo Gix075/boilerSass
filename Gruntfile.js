@@ -4,9 +4,20 @@ module.exports = function (grunt) {
         
         pkg: grunt.file.readJSON('package.json'),
         
-        
+        clean: {
+            test: ['<%= pkg.test %>']
+        },
         
         copy: {
+            
+            test: {
+        
+                expand: true,
+                cwd: '<%= pkg.src %>/',
+                src: ['**/*',  '!**/node_modules/**'],
+                dest: '<%= pkg.test %>/'
+                  
+            },
             
             html5boilerplate: {
                 files: [
@@ -103,19 +114,24 @@ module.exports = function (grunt) {
     });
     
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-string-replace');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-processhtml');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     
     // Developing Tasks
     grunt.registerTask('default', ['message']);
-    grunt.registerTask('dist', ['copy']);
+    grunt.registerTask('dist', ['copy:html5boilerplate','copy:boilersass']);
     
     
-    // Install Tasks
+    // Test Tasks
+    grunt.registerTask('test', function() {
+        grunt.task.run([
+            'clean:test','copy:test'
+        ]);
+        grunt.log.ok('TEST IS READY! Enter "test" directory and test boilerSASS using Grunt');
+    });
+    
+    // Message Tasks
     grunt.registerTask('message', function() {
-        grunt.fatal('only DIST task is available!');
+        grunt.fatal('only DIST or TEST tasks are available!');
     });
 
 };

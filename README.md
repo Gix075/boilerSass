@@ -41,6 +41,8 @@ All vendors package are managed by NPM.
 
 * * *
 
+### Font Awesome 5
+An upgrade to **Font Awesome 5** will be released with the *version 1.9.0*
 
 ### History
 
@@ -49,6 +51,7 @@ All vendors package are managed by NPM.
 * New typography helper classes added
 * New transition easings mixins added
 * New Demo file added (uncompleted)
+* Bootstrap updated to version 4 stable
 
 #### version 1.7.5
 * Bug fixed on src/partials/_variables.scss
