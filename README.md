@@ -46,6 +46,9 @@ An upgrade to **Font Awesome 5** will be released with the *version 1.9.0*
 
 ### History
 
+#### version 1.8.1
+* Bug on body padding and margin solved
+
 #### version 1.8.0
 * Typography style updated
 * New typography helper classes added

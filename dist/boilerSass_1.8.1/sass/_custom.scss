@@ -14,12 +14,13 @@ body {
     font-size: 16px;
 }
 
-.flexgrid {
-    display: flex;
-    flex-wrap: wrap;
+
+.demo-grid {
     .flexgrid-item {
-        flex: 1;
-        padding: $padding;
+        background: $gray_extra_light;
+    }
+    .grid-demo-content {
+        padding: $padding/2;
     }
 }
 

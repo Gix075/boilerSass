@@ -17,13 +17,16 @@
 
 html,
 body {
-    margin: $body_margin;
-    padding: $body_padding;
     font-family: $body_font_family;
     font-weight: $font_base_weight;
     font-size: $font_base_size;
     color: $font_base_color;
     line-height: $font_base_lineheight;
+}
+
+body {
+    margin: $body_margin;
+    padding: $body_padding;
 }
 
 /* Standard Links */
