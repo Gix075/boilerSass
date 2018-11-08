@@ -55,7 +55,13 @@
 }
 
 
-// Icon Button
+/*  
+    Icon Button 
+    ------------------
+    This mixin show an icon at right or left of the button 
+    Remember that this mixin require an icon font such as FontAwesome
+*/
+
 @mixin button-icon($icon) {
     @include button;
     margin-top: $margin/2;
@@ -193,308 +199,130 @@
 /* TRANSITIONS */
 /* ============================================== */
 @mixin transition ( $property, $duration, $style) {
-    
-    -webkit-transition-property: $property;  
-    -webkit-transition-duration: $duration;
-    -webkit-transition-timing-function: $style;
- 
-            transition-property: $property;  
-            transition-duration: $duration;
-            transition-timing-function: $style;
+    transition-property: $property;  
+    transition-duration: $duration;
+    transition-timing-function: $style;
 }
 
-@mixin easeInQuad($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.550, 0.085, 0.680, 0.530); 
-       -moz-transition: all $duration cubic-bezier(0.550, 0.085, 0.680, 0.530); 
-         -o-transition: all $duration cubic-bezier(0.550, 0.085, 0.680, 0.530); 
-            transition: all $duration cubic-bezier(0.550, 0.085, 0.680, 0.530); /* easeInQuad */
 
-    -webkit-transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530); 
-       -moz-transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530); 
-         -o-transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530); 
-            transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530); /* easeInQuad */    
+@mixin easeInQuad($duration) {
+    transition: all $duration cubic-bezier(0.550, 0.085, 0.680, 0.530); /* easeInQuad */
+    transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530); /* easeInQuad */    
 }
 
 @mixin easeInCubic($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.550, 0.055, 0.675, 0.190); 
-       -moz-transition: all $duration cubic-bezier(0.550, 0.055, 0.675, 0.190); 
-         -o-transition: all $duration cubic-bezier(0.550, 0.055, 0.675, 0.190); 
-            transition: all $duration cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
-
-    -webkit-transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); 
-       -moz-transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); 
-         -o-transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); 
-            transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */   
+    transition: all $duration cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
+    transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */   
 }
 
 @mixin easeInQuart($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.895, 0.030, 0.685, 0.220); 
-       -moz-transition: all $duration cubic-bezier(0.895, 0.030, 0.685, 0.220); 
-         -o-transition: all $duration cubic-bezier(0.895, 0.030, 0.685, 0.220); 
-            transition: all $duration cubic-bezier(0.895, 0.030, 0.685, 0.220); /* easeInQuart */
-
-    -webkit-transition-timing-function: cubic-bezier(0.895, 0.030, 0.685, 0.220); 
-       -moz-transition-timing-function: cubic-bezier(0.895, 0.030, 0.685, 0.220); 
-         -o-transition-timing-function: cubic-bezier(0.895, 0.030, 0.685, 0.220); 
-            transition-timing-function: cubic-bezier(0.895, 0.030, 0.685, 0.220); /* easeInQuart */   
+    transition: all $duration cubic-bezier(0.895, 0.030, 0.685, 0.220); /* easeInQuart */
+    transition-timing-function: cubic-bezier(0.895, 0.030, 0.685, 0.220); /* easeInQuart */   
 }
 
 @mixin easeInQuint($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.755, 0.050, 0.855, 0.060); 
-       -moz-transition: all $duration cubic-bezier(0.755, 0.050, 0.855, 0.060); 
-         -o-transition: all $duration cubic-bezier(0.755, 0.050, 0.855, 0.060); 
-            transition: all $duration cubic-bezier(0.755, 0.050, 0.855, 0.060); /* easeInQuint */
-
-    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); 
-       -moz-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); 
-         -o-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); 
-            transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); /* easeInQuint */
+    transition: all $duration cubic-bezier(0.755, 0.050, 0.855, 0.060); /* easeInQuint */
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); /* easeInQuint */
 }
 
 @mixin easeInSine($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.470, 0.000, 0.745, 0.715); 
-       -moz-transition: all $duration cubic-bezier(0.470, 0.000, 0.745, 0.715); 
-         -o-transition: all $duration cubic-bezier(0.470, 0.000, 0.745, 0.715); 
-            transition: all $duration cubic-bezier(0.470, 0.000, 0.745, 0.715); /* easeInSine */
-
-    -webkit-transition-timing-function: cubic-bezier(0.470, 0.000, 0.745, 0.715); 
-       -moz-transition-timing-function: cubic-bezier(0.470, 0.000, 0.745, 0.715); 
-         -o-transition-timing-function: cubic-bezier(0.470, 0.000, 0.745, 0.715); 
-            transition-timing-function: cubic-bezier(0.470, 0.000, 0.745, 0.715); /* easeInSine */
+    transition: all $duration cubic-bezier(0.470, 0.000, 0.745, 0.715); /* easeInSine */
+    transition-timing-function: cubic-bezier(0.470, 0.000, 0.745, 0.715); /* easeInSine */
 }
 
 @mixin easeInExpo($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.950, 0.050, 0.795, 0.035); 
-       -moz-transition: all $duration cubic-bezier(0.950, 0.050, 0.795, 0.035); 
-         -o-transition: all $duration cubic-bezier(0.950, 0.050, 0.795, 0.035); 
-            transition: all $duration cubic-bezier(0.950, 0.050, 0.795, 0.035); /* easeInExpo */
-
-    -webkit-transition-timing-function: cubic-bezier(0.950, 0.050, 0.795, 0.035); 
-       -moz-transition-timing-function: cubic-bezier(0.950, 0.050, 0.795, 0.035); 
-         -o-transition-timing-function: cubic-bezier(0.950, 0.050, 0.795, 0.035); 
-            transition-timing-function: cubic-bezier(0.950, 0.050, 0.795, 0.035); /* easeInExpo */
+    transition: all $duration cubic-bezier(0.950, 0.050, 0.795, 0.035); /* easeInExpo */
+    transition-timing-function: cubic-bezier(0.950, 0.050, 0.795, 0.035); /* easeInExpo */
 }
 
 @mixin easeInCirc($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-       -moz-transition: all $duration cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-         -o-transition: all $duration cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-            transition: all $duration cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
-
-    -webkit-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-       -moz-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-         -o-transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); 
-            transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
+    transition: all $duration cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
+    transition-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335); /* easeInCirc */
 }
 
 @mixin easeInBack($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.600, 0, 0.735, 0.045); /* older webkit */
-    -webkit-transition: all $duration cubic-bezier(0.600, -0.280, 0.735, 0.045); 
-       -moz-transition: all $duration cubic-bezier(0.600, -0.280, 0.735, 0.045); 
-         -o-transition: all $duration cubic-bezier(0.600, -0.280, 0.735, 0.045); 
-            transition: all $duration cubic-bezier(0.600, -0.280, 0.735, 0.045); /* easeInBack */
-
-    -webkit-transition-timing-function: cubic-bezier(0.600, 0, 0.735, 0.045); /* older webkit */
-    -webkit-transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045); 
-       -moz-transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045); 
-         -o-transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045); 
-            transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045); /* easeInBack */
+    transition: all $duration cubic-bezier(0.600, -0.280, 0.735, 0.045); /* easeInBack */
+    transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045); /* easeInBack */
 }
 
 @mixin easeOutQuad($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.250, 0.460, 0.450, 0.940); 
-       -moz-transition: all $duration cubic-bezier(0.250, 0.460, 0.450, 0.940); 
-         -o-transition: all $duration cubic-bezier(0.250, 0.460, 0.450, 0.940); 
-            transition: all $duration cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
-
-    -webkit-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940); 
-       -moz-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940); 
-         -o-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940); 
-            transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
+    transition: all $duration cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
+    transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
 }
 
 @mixin easeOutCubic($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.215, 0.610, 0.355, 1.000); 
-       -moz-transition: all $duration cubic-bezier(0.215, 0.610, 0.355, 1.000); 
-         -o-transition: all $duration cubic-bezier(0.215, 0.610, 0.355, 1.000); 
-            transition: all $duration cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
-
-    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); 
-       -moz-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); 
-         -o-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); 
-            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+    transition: all $duration cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
 }
 
 @mixin easeOutQuart($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.165, 0.840, 0.440, 1.000); 
-       -moz-transition: all $duration cubic-bezier(0.165, 0.840, 0.440, 1.000); 
-         -o-transition: all $duration cubic-bezier(0.165, 0.840, 0.440, 1.000); 
-            transition: all $duration cubic-bezier(0.165, 0.840, 0.440, 1.000); /* easeOutQuart */
-
-    -webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); 
-       -moz-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); 
-         -o-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); 
-            transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); /* easeOutQuart */
+    transition: all $duration cubic-bezier(0.165, 0.840, 0.440, 1.000); /* easeOutQuart */
+    transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); /* easeOutQuart */
 }
 
 @mixin easeOutQuint($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.230, 1.000, 0.320, 1.000); 
-       -moz-transition: all $duration cubic-bezier(0.230, 1.000, 0.320, 1.000); 
-         -o-transition: all $duration cubic-bezier(0.230, 1.000, 0.320, 1.000); 
-            transition: all $duration cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
-
-    -webkit-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
-       -moz-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
-         -o-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
-            transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
+    transition: all $duration cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
+    transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
 }
 
 @mixin easeOutSine($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-       -moz-transition: all $duration cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-         -o-transition: all $duration cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-            transition: all $duration cubic-bezier(0.390, 0.575, 0.565, 1.000); /* easeOutSine */
-
-    -webkit-transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-       -moz-transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-         -o-transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000); 
-            transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000); /* easeOutSine */
+    transition: all $duration cubic-bezier(0.390, 0.575, 0.565, 1.000); /* easeOutSine */
+    transition-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000); /* easeOutSine */
 }
 
 @mixin easeOutExpo($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-       -moz-transition: all $duration cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-         -o-transition: all $duration cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-            transition: all $duration cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
-
-    -webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-       -moz-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-         -o-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-            transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+    transition: all $duration cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+    transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
 }
 
 @mixin easeOutCirc($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.075, 0.820, 0.165, 1.000); 
-       -moz-transition: all $duration cubic-bezier(0.075, 0.820, 0.165, 1.000); 
-         -o-transition: all $duration cubic-bezier(0.075, 0.820, 0.165, 1.000); 
-            transition: all $duration cubic-bezier(0.075, 0.820, 0.165, 1.000); /* easeOutCirc */
-
-    -webkit-transition-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000); 
-       -moz-transition-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000); 
-         -o-transition-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000); 
-            transition-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000); /* easeOutCirc */
+    transition: all $duration cubic-bezier(0.075, 0.820, 0.165, 1.000); /* easeOutCirc */
+    transition-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000); /* easeOutCirc */
 }
 
 @mixin easeOutBack($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
-    -webkit-transition: all $duration cubic-bezier(0.175, 0.885, 0.320, 1.275); 
-       -moz-transition: all $duration cubic-bezier(0.175, 0.885, 0.320, 1.275); 
-         -o-transition: all $duration cubic-bezier(0.175, 0.885, 0.320, 1.275); 
-            transition: all $duration cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
-
-    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
-    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); 
-       -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); 
-         -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); 
-            transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+    transition: all $duration cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
 }
 
 @mixin easeInOutQuad($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.455, 0.030, 0.515, 0.955); 
-       -moz-transition: all $duration cubic-bezier(0.455, 0.030, 0.515, 0.955); 
-         -o-transition: all $duration cubic-bezier(0.455, 0.030, 0.515, 0.955); 
-            transition: all $duration cubic-bezier(0.455, 0.030, 0.515, 0.955); /* easeInOutQuad */
-
-    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955); 
-       -moz-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955); 
-         -o-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955); 
-            transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955); /* easeInOutQuad */
+    transition: all $duration cubic-bezier(0.455, 0.030, 0.515, 0.955); /* easeInOutQuad */
+    transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955); /* easeInOutQuad */
 }
 
 @mixin easeInOutCubic($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.645, 0.045, 0.355, 1.000); 
-       -moz-transition: all $duration cubic-bezier(0.645, 0.045, 0.355, 1.000); 
-         -o-transition: all $duration cubic-bezier(0.645, 0.045, 0.355, 1.000); 
-            transition: all $duration cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
-
-    -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
-       -moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
-         -o-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
-            transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+    transition: all $duration cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
 }
 
 @mixin easeInOutQuart($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-       -moz-transition: all $duration cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-         -o-transition: all $duration cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-            transition: all $duration cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
-
-    -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-       -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-         -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-            transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+    transition: all $duration cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+    transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
 }
 
 @mixin easeInOutQuint($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.860, 0.000, 0.070, 1.000); 
-       -moz-transition: all $duration cubic-bezier(0.860, 0.000, 0.070, 1.000); 
-         -o-transition: all $duration cubic-bezier(0.860, 0.000, 0.070, 1.000); 
-            transition: all $duration cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
-
-    -webkit-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); 
-       -moz-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); 
-         -o-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); 
-            transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+    transition: all $duration cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+    transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
 }
 
 @mixin easeInOutSine($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.445, 0.050, 0.550, 0.950); 
-       -moz-transition: all $duration cubic-bezier(0.445, 0.050, 0.550, 0.950); 
-         -o-transition: all $duration cubic-bezier(0.445, 0.050, 0.550, 0.950); 
-            transition: all $duration cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
-
-    -webkit-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
-       -moz-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
-         -o-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
-            transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+    transition: all $duration cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+    transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
 }
 
 @mixin easeInOutExpo($duration) {
-    -webkit-transition: all $duration cubic-bezier(1.000, 0.000, 0.000, 1.000); 
-       -moz-transition: all $duration cubic-bezier(1.000, 0.000, 0.000, 1.000); 
-         -o-transition: all $duration cubic-bezier(1.000, 0.000, 0.000, 1.000); 
-            transition: all $duration cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */
-
-    -webkit-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000); 
-       -moz-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000); 
-         -o-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000); 
-            transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */
+    transition: all $duration cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */
+    transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */
 }
 
 @mixin easeInOutCirc($duration) {
--webkit-transition: all $duration cubic-bezier(0.785, 0.135, 0.150, 0.860); 
-   -moz-transition: all $duration cubic-bezier(0.785, 0.135, 0.150, 0.860); 
-     -o-transition: all $duration cubic-bezier(0.785, 0.135, 0.150, 0.860); 
-        transition: all $duration cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
-
--webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860); 
-   -moz-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860); 
-     -o-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860); 
-        transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
+    transition: all $duration cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
 @mixin easeInOutBack($duration) {
-    -webkit-transition: all $duration cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
-    -webkit-transition: all $duration cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-       -moz-transition: all $duration cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-         -o-transition: all $duration cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-            transition: all $duration cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
-
-    -webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
-    -webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-       -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-         -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-            transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+    transition: all $duration cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
 }
 
 
@@ -502,30 +330,25 @@
 // Transforms //
 // ********************** //
 @mixin transform ( $transformProperties ) {
-    -webkit-transform: $transformProperties;
-            transform: $transformProperties;
+    transform: $transformProperties;
 }
  
 // Transforms > Translate //
 // ********************** //
 @mixin translate ( $x, $y ) {
-    -webkit-transform: translate($x,$y);
-            transform: translate($x,$y);
+    transform: translate($x,$y);
 }
  
 @mixin translate-50Y {
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
 }
  
 @mixin translate-50X {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
 }
  
 @mixin translate-50 {
-    -webkit-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 }
  
 

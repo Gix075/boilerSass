@@ -19,6 +19,7 @@ $margin: $space;
 // =================================
 // BREKPOINTS
 // =================================
+
 $breakpoint_phone: 600px;
 $breakpoint_tablet: 768px; 
 $breakpoint_tablet_large: 950px;
@@ -29,12 +30,13 @@ $bp_phone: $breakpoint_phone;
 $bp_tablet: $breakpoint_tablet;
 $bp_tablet_large: $breakpoint_tablet_large; 
 $bp_desktop_small: $breakpoint_desktop_small; 
-$bp_desktop: $breakpoint_desktop_small; 
+$bp_desktop: $breakpoint_desktop; 
 
 
 // =================================
 // ALL COLORS
 // =================================
+
 $red: red;
 $green: green;
 $yellow: yellow;
@@ -50,26 +52,29 @@ $cyan: cyan;
 // COLORS PALETTE
 // =================================
 
-$color_1: #2C4149;
+$color_1: #3D5A80;
 $color_1_hover: lighten($color_1,15%);
 
-$color_2: #5C6F77;
+$color_2: #98C1D9;
 $color_2_hover: lighten($color_2,15%);
 
-$color_3: #B1C5CE;
+$color_3: #E0FBFC;
 $color_3_hover: lighten($color_3,15%);
 
-$color_4: #E0F5FF;
+$color_4: #EE6C4D;
 $color_4_hover: lighten($color_4,15%);
 
-$color_5: #EFF6F9;
+$color_5: #293241;
 $color_5_hover: lighten($color_5,15%);
 
+$color_error: #F05D5E;
+$color_warning: #EE964B;
+$color_info: #84DCC6;
+$color_success: #43AA8B;
 
 // =================================
 // GRAYSCALE
 // =================================
-
 
 $white: #fff;
 $black: #000000;
@@ -81,13 +86,6 @@ $gray_middle: lighten($black,30%);
 $gray_dark: lighten($black,20%);
 $gray_extra_dark: lighten($black,15%);
 
-
-//$gray_extra_light: #A2A2A2;
-//$gray_light: #737373;
-//$gray: #5C5C5C;
-//$gray_middle: #454545;
-//$gray_dark: #2E2E2E;
-//$gray_extra_dark: #171717;
 
 // =================================
 // GLOBALS VARS
@@ -152,12 +150,12 @@ $font_base_lineheight: 1.2em;
 
 // ---- Custom Fonts
 $font_custom_1: "Open Sans", $font_base;
-$font_custom_2: "Montserrat", $font_base;
+$font_custom_2: "Poppins", $font_base;
 $font-icon-1: "FontAwesome";
 $font-icon-2: "FontAwesome";
 
 // ---- HTML/BODY Font
-$body_font_family: $font_custom_2;
+$body_font_family: $font_custom_1;
 
 // ---- Font sizes
 $font_mini: 0.5em;

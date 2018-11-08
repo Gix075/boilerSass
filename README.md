@@ -9,18 +9,11 @@ You can setup any custom fonts or colors you need and use many useful mixins tha
 
 **boilerSASS** is a Grunt ready project, so Grunt is required and you can discover more about it from [https://gruntjs.com](https://gruntjs.com).
 
-**boilerSASS** is a simple SASS Boilerplate useful to start a complete new web project in less than 10 minutes<br>
-This boilerplate is based on HTML5 Boilerplate and include also:
+**boilerSASS** is a simple SASS Boilerplate useful to start a complete new web project in less than 10 minutes
 
-* Bootstrap 4 
-* FontAwesome icons
-* Elegant Icons
-* Material Icons
-* Normailize.css
-* Animate.css
-
-All vendors package are managed by NPM.
-
+## Warning
+From version **2.0.0** all external libs and packages was removed and project is heavy changed.<br>
+**POSTCSS** are now included to the project, so, for this reason, some mixins was removed or changed.
 
 * * *
 
@@ -29,22 +22,23 @@ All vendors package are managed by NPM.
 *   **Install NPM components**  
     Open you system console and access BoilerSASS directory on your desktop  
     then type `$ npm install`                  
-*   **Configure package**  
-    Open the file `config.json` and set as true the libraries that you want include on your sass project.
-*   **Install vendors libs**  
-    Open you system console and access BoilerSASS directory on your desktop  
-    then type `$ Grunt install`
+
 *   **Using SASS**  
     Once BoilerSASS is installed you can start coding Sass  
-    Type `$ Grunt` on your console to first BoilerSASS compile and to start the _watch_ task that autocomile SASS files when changed.
+    Type `$ Grunt` on your console to first BoilerSASS compile and to start the _watch_ task that autocomile SASS files when changed and POSTCSS fix your css with all required prefixes.
+
+*   Customize your Gruntfile.js as you need!
 
 
 * * *
 
-### Font Awesome 5
-An upgrade to **Font Awesome 5** will be released with the *version 1.9.0*
 
 ### History
+
+#### version 2.0.0
+* Romoved all external libs and packages.
+* Only normalize.css is included
+* **POSTCSS** added to the project
 
 #### version 1.8.1
 * Bug on body padding and margin solved

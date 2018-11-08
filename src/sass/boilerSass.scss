@@ -28,24 +28,7 @@
 // Normalize
 // ***************************************
 // Here will be included the import of Normalize.css if is selected on the configuration
-// {{NORMALIZE}}
-
-// Animate
-// ***************************************
-// Here will be included the import of Animate.css if is selected on the configuration
-// {{ANIMATE}}
-
-// Bootstrap 4
-// ***************************************
-// Here will be included the import of Bootstrap4 if is selected on the configuration
-// {{BOOTSTRAP}}
-
-// Icon Fonts
-// ***************************************
-// Here will be included the import of the icons if is selected on the configuration
-// {{FONTAWESOME}}
-// {{MATERIALICONS}}
-// {{ELEGANTICONS}}
+@import "vendors/normalize";
 
 // Global Style 
 // ***************************************
