@@ -1,8 +1,8 @@
-/*  
+/*
  *  ***************************************************
  *  boilerSASS
  *  ***************************************************
- *  Simple SASS Boilerplate based on HTML5 Boilerplate 
+ *  Simple SASS Boilerplate based on HTML5 Boilerplate
  *  ***************************************************
 
  *  VARIABLES FILE
@@ -21,16 +21,16 @@ $margin: $space;
 // =================================
 
 $breakpoint_phone: 600px;
-$breakpoint_tablet: 768px; 
+$breakpoint_tablet: 768px;
 $breakpoint_tablet_large: 950px;
-$breakpoint_desktop_small: 1024px; 
-$breakpoint_desktop: 1280px; 
+$breakpoint_desktop_small: 1024px;
+$breakpoint_desktop: 1280px;
 
 $bp_phone: $breakpoint_phone;
 $bp_tablet: $breakpoint_tablet;
-$bp_tablet_large: $breakpoint_tablet_large; 
-$bp_desktop_small: $breakpoint_desktop_small; 
-$bp_desktop: $breakpoint_desktop; 
+$bp_tablet_large: $breakpoint_tablet_large;
+$bp_desktop_small: $breakpoint_desktop_small;
+$bp_desktop: $breakpoint_desktop;
 
 
 // =================================
@@ -112,7 +112,7 @@ $hr_margin_top: $space;
 $hr_margin_bottom: $space;
 
 
-// -------- Default Links 
+// -------- Default Links
 
 $link_color: $color_3;
 $link_color_hover: $color_3_hover;
@@ -143,6 +143,8 @@ $text_selection_textshadow: none;
 $font_base: Helvetica, Arial, sans-serif;
 $font_base_color: $gray_dark;
 $font_base_size: 16px;
+$font_base_size_tablet: $font_base_size;
+$font_base_size_phone: $font_base_size;
 $font_base_small_size: 0.8em;
 $font_base_weight: 400;
 $font_base_strong_weight: 700;
