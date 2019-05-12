@@ -1,0 +1,21 @@
+/*
+ *  ***************************************************
+ *  boilerSASS
+ *  ***************************************************
+ *  Simple SASS Boilerplate based on HTML5 Boilerplate 
+ *  ***************************************************
+
+ *  CSS GRID
+*/
+
+// Probably you can modify this style, simply editing the "_variables.scss" and "_mixins.scss" files
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    .grid-item {
+        
+    }
+}

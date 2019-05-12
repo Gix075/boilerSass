@@ -12,6 +12,7 @@
 /* ============================================== */
 
 @mixin button() {
+    
     display: inline-block;
     background: $gray-dark;
     color: $white;
@@ -29,6 +30,7 @@
     cursor: pointer;
     
     @include transition(all,0.2s,ease);
+    
     &:hover {
         color: $white;
         background: rgba($gray-dark,0.8);
@@ -42,6 +44,7 @@
         pointer-events: none;
         opacity: 0.5;
     }
+    
 }
 
 @mixin button-color($background,$color) {
@@ -134,7 +137,7 @@
     
     font-size: $base_font_size;
     
-    $bps: $bp_tablet $bp_tablet_large $bp_desktop_small $bp_desktop;
+    $bps: $bps_list; // $bps_list is in variables.scss
     $font-size: $base_font_size;
     
     @each $bp in $bps {
@@ -144,6 +147,20 @@
         }
     }
     
+}
+
+// Titles Style //
+// ********************** //
+@mixin h_title_style($h_map, $h_small_map) {
+    font-family: map-get($h_map, "font");
+    font-weight: map-get($h_map, "weight");
+    color: map-get($h_map, "color");
+    padding: map-get($h_map, "padding");
+    margin: map-get($h_map, "margin");
+    small {
+        color: map-get($h_small_map, "font");
+        font-size: map-get($h_small_map, "font");
+    }
 }
 
 @mixin message_box() {

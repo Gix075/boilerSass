@@ -38,7 +38,17 @@ h6,
     }
 }
 
-h1,
+@for $i from 1 through 6 {
+    h#{$i},
+    .h#{$i} {
+        $map: map-get($h_maps, h#{$i});
+        $map_small: map-get($h_small_maps, h#{$i});
+        @include h_title_size(map-get($map,"size"));
+        @include h_title_style($map, $map_small);
+    }
+}
+
+/*h1,
 .h1 {
     @include h_title_size($h1_size);
     font-family: $h1_font;
@@ -120,7 +130,7 @@ h6,
         color: $h6_small_color;
         font-size: $h6_small_size;
     }
-}
+}*/
 
 /* ********************************** */
 /* PARAGRAPHS */
