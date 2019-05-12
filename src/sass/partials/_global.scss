@@ -2,13 +2,13 @@
  *  ***************************************************
  *  boilerSASS
  *  ***************************************************
- *  Simple SASS Boilerplate based on HTML5 Boilerplate 
+ *  Simple SASS Boilerplate based on HTML5 Boilerplate
  *  ***************************************************
 
  *  GLOBAL STYLE
 */
 
-// This is the "global style". 
+// This is the "global style".
 // Probably you can modify this style, simply editing the "_variables.scss" and "_mixins.scss" files
 
 /* ==========================================================================
@@ -19,9 +19,15 @@ html,
 body {
     font-family: $body_font_family;
     font-weight: $font_base_weight;
-    font-size: $font_base_size;
+    font-size: $font_base_size_phone;
     color: $font_base_color;
     line-height: $font_base_lineheight;
+    @media all and (min-width: $bp_tablet) {
+        font-size: $font_base_size_tablet;
+    }
+    @media all and (min-width: $bp_desktop) {
+        font-size: $font_base_size;
+    }
 }
 
 body {
@@ -31,30 +37,30 @@ body {
 
 /* Standard Links */
 /* **************************************** */
- 
+
 a:link {
     color: $link_color;
     text-decoration: $link_decoration;
-    @include transition(color,0.2s,ease);
+    transition: all 0.2s ease;
 }
- 
+
 a:visited {
     color: $link_color_visited;
     text-decoration: $link_decoration_visited;
 }
- 
+
 a:hover {
     color: $link_color_hover;
     text-decoration: $link_decoration_hover;
 }
- 
+
 a:active {
     color: $link_color_active;
     text-decoration: $link_decoration_active;
 }
- 
-a:focus { 
-    outline: link_outline_focus; 
+
+a:focus {
+    outline: link_outline_focus;
     color: $link_color_focus;
     text-decoration: $link_decoration_focus;
 }
@@ -87,7 +93,7 @@ hr {
     margin: $hr_margin_top 0 $hr_margin_bottom 0;
     padding: 0;
 }
- 
+
 /* Elements */
 /* **************************************** */
 
@@ -127,10 +133,10 @@ strong {
 }
 
 /*  ==========================================================================
-    Responsive/Fluid Images 
+    Responsive/Fluid Images
     ========================================================================== */
 
-.img-fluid img, img.img-fluid, 
+.img-fluid img, img.img-fluid,
 .img-100 img, img.img-100  {
     width: 100%;
 }
