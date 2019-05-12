@@ -50,87 +50,42 @@
     margin: 0;
 }
  
-.no-marg-ver {
-    margin-top: 0;
-    margin-bottom: 0;
-}
- 
-.no-marg-hor {
-    margin-right: 0;
-    margin-left: 0;
-}
- 
-.no-marg-top {
-    margin-top: 0;
-}
- 
-.no-marg-bottom {
-    margin-bottom: 0;
-}
- 
-.no-marg-right {
-    margin-right: 0;
-}
- 
-.no-marg-left {
-    margin-left: 0;
-}
- 
 // --> assignment
 .marg {
     margin: $margin;
     &.half {
         margin: $margin/2;
     }
-}
- 
-.marg-ver {
-    margin-top: $margin;
-    margin-bottom: $margin;
-    &.half {
-        margin-top: $margin/2;
-        margin-bottom: $margin/2;
+    &.quarter {
+        margin: $margin/4;
     }
-}
- 
-.marg-hor {
-    margin-left: $margin;
-    margin-right: $margin;
-    &.half {
-        margin-left: $margin/2;
-        margin-right: $margin/2;
-    }
-}
- 
-.marg-top {
-    margin-top: $margin;
-    &.half {
-        margin-top: $margin/2;
-    }
-}
- 
-.marg-bottom {
-    margin-bottom: $margin;
-    &.half {
-        margin-bottom: $margin/2;
-    }
-}
- 
-.marg-left {
-    margin-left: $margin;
-    &.half {
-        margin-left: $margin/2;
-    }
-}
- 
-.marg-right {
-    margin-right: $margin;
-    &.half {
-        margin-right: $margin/2;
+    &.double {
+        margin: $margin*2;
     }
 }
 
-
+@each $pos in $positions {
+    
+    // --> selective resets 
+    .no-marg-#{$pos} {
+        margin-#{$pos}: 0;
+    }
+    
+    // --> selective assignment 
+    .marg-#{$pos} {
+        margin-#{$pos}: $margin;
+        &.half {
+            margin-#{$pos}: $margin/2;
+        }
+        &.quarter {
+            margin-#{$pos}: $margin/4;
+        }
+        &.double {
+            margin-#{$pos}: $margin*2;
+        }
+    }
+    
+}
  
 /*  ========================================================================== */ 
 /*  Paddings */
@@ -140,87 +95,41 @@
     padding: 0;
 }
  
-.no-pad-ver {
-    padding-top: 0;
-    padding-bottom: 0;
-}
- 
-.no-pad-hor {
-    padding-right: 0;
-    padding-left: 0;
-}
- 
-.no-pad-top {
-    padding-top: 0;
-}
- 
-.no-pad-bottom {
-    padding-bottom: 0;
-}
- 
-.no-pad-right {
-    padding-right: 0;
-}
- 
-.no-pad-left {
-    padding-left: 0;
-}
- 
 // --> assignment
 .pad {
     padding: $padding;
     &.half {
         padding: $padding/2;
     }
-}
- 
-.pad-ver {
-    padding-top: $padding;
-    padding-bottom: $padding;
-    &.half {
-        padding-top: $padding/2;
-        padding-bottom: $padding/2;
+    &.quarter {
+        padding: $padding/4;
+    }
+    &.double {
+        padding: $padding*2;
     }
 }
- 
-.pad-hor {
-    padding-left: $padding;
-    padding-right: $padding;
-    &.half {
-        padding-left: $padding/2;
-        padding-right: $padding/2;
-    }
-}
- 
-.pad-top {
-    padding-top: $padding;
-    &.half {
-        padding-top: $padding/2;
-    }
-}
- 
-.pad-bottom {
-    padding-bottom: $padding;
-    &.half {
-        padding-bottom: $padding/2;
-    }
-}
- 
-.pad-left {
-    padding-left: $padding;
-    &.half {
-       padding-left: $padding/2; 
-    }
-}
- 
-.pad-right {
-    padding-right: $padding;
-    &.half {
-       padding-right: $padding/2; 
-    }
-}
- 
 
+@each $pos in $positions {
+    
+    // --> selective resets 
+    .no-pad-#{$pos} {
+        padding-#{$pos}: 0;
+    }
+    
+    // --> selective assignment 
+    .pad-#{$pos} {
+        padding-#{$pos}: $padding;
+        &.half {
+            padding-#{$pos}: $padding/2;
+        }
+        &.quarter {
+            padding-#{$pos}: $padding/4;
+        }
+        &.double {
+            padding-#{$pos}: $padding*2;
+        }
+    }
+}
 
 
 /* ############################################################################################ */

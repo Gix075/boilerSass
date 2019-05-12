@@ -6,7 +6,6 @@
  *  ***************************************************
 */
 
-
 // MAIN FILE
 // This is the project main file. 
 // Don't put any sass/css code inside this file but include here your own partial files.
@@ -46,7 +45,15 @@
 // ***************************************
 @import "partials/typography";
 
+// System Messages 
+// ***************************************
+@import "partials/system-messages";
+
 // Tables 
+// ***************************************
+@import "partials/tables";
+
+// Forms 
 // ***************************************
 @import "partials/tables";
 

@@ -35,6 +35,12 @@ From version **2.0.0** all external libs and packages was removed and project is
 
 ### History
 
+#### version 2.1.0
+* New responsive style added for Headlines
+* New responsive font sizes mixin added for Headlines
+* Very simple form style added
+* Some bug fixed for forms style
+
 #### version 2.0.0
 * Romoved all external libs and packages.
 * Only normalize.css is included

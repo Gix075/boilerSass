@@ -16,9 +16,8 @@
     background: $gray-dark;
     color: $white;
     text-transform: uppercase;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 $padding/4;
+    line-height: 1em;
+    padding: $padding/4 $padding/2;
     font-size: 1.2em;
     font-weight: 700;
     font-size: 1.2em;
@@ -123,11 +122,42 @@
 
 // Lists //
 // ********************** //
-
 @mixin resetlist {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+// Title Sizes //
+// ********************** //
+@mixin h_title_size($base_font_size) {
+    
+    font-size: $base_font_size;
+    
+    $bps: $bp_tablet $bp_tablet_large $bp_desktop_small $bp_desktop;
+    $font-size: $base_font_size;
+    
+    @each $bp in $bps {
+        $font-size: $font-size + 0.2;
+        @media all and (min-width: #{$bp}) {
+            font-size: $font-size;
+        }
+    }
+    
+}
+
+@mixin message_box() {
+    padding: $padding/4;
+    border-radius: $border_radius;
+    h1,h2,h3,h4,h5,h6,p {
+        margin: 0;
+    }
+}
+
+@mixin message_box_color($base_color) {
+    color: $white;
+    background-color: $base_color;
+    border: 1px solid darken($base_color, 10%);
 }
 
 // Ellipsis //
@@ -141,9 +171,26 @@
 // Placeholder //
 // ********************** //
 @mixin placeholder($color,$size,$weight) {
-    ::-webkit-input-placeholder {color:$arguments; font-size: $size; font-weight: $weight;}
-    ::-moz-placeholder {color:$arguments; font-size: $size; font-weight: $weight;}
-    :-ms-input-placeholder {color:$arguments; font-size: $size; font-weight: $weight;}
+    &::-webkit-input-placeholder {color:$arguments; font-size: $size; font-weight: $weight;}
+    &::-moz-placeholder {color:$arguments; font-size: $size; font-weight: $weight;}
+    &:-ms-input-placeholder {color:$arguments; font-size: $size; font-weight: $weight;}
+}
+
+// Screen Reader Only //
+// ********************** //
+@mixin sr_only() {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@mixin sr-only() {
+    @include sr_only();
 }
  
 // Position //

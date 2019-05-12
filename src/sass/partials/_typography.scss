@@ -40,8 +40,8 @@ h6,
 
 h1,
 .h1 {
+    @include h_title_size($h1_size);
     font-family: $h1_font;
-    font-size: $h1_size;
     font-weight: $h1_fontwheigth;
     color: $h1_color;
     padding: $h1_padding;
@@ -54,8 +54,8 @@ h1,
 
 h2,
 .h2 {
+    @include h_title_size($h2_size);
     font-family: $h2_font;
-    font-size: $h2_size;
     font-weight: $h2_fontwheigth;
     color: $h2_color;
     padding: $h2_padding;
@@ -68,8 +68,8 @@ h2,
 
 h3,
 .h3 {
+    @include h_title_size($h3_size);
     font-family: $h3_font;
-    font-size: $h3_size;
     font-weight: $h3_fontwheigth;
     color: $h3_color;
     padding: $h3_padding;
@@ -82,8 +82,8 @@ h3,
 
 h4,
 .h4 {
+    @include h_title_size($h4_size);
     font-family: $h4_font;
-    font-size: $h4_size;
     font-weight: $h4_fontwheigth;
     color: $h4_color;
     padding: $h4_padding;
@@ -96,8 +96,8 @@ h4,
 
 h5,
 .h5 {
+    @include h_title_size($h5_size);
     font-family: $h5_font;
-    font-size: $h5_size;
     font-weight: $h5_fontwheigth;
     color: $h5_color;
     padding: $h5_padding;
@@ -110,8 +110,8 @@ h5,
 
 h6,
 .h6 {
+    @include h_title_size($h6_size);
     font-family: $h6_font;
-    font-size: $h6_size;
     font-weight: $h6_fontwheigth;
     color: $h6_color;
     padding: $h6_padding;

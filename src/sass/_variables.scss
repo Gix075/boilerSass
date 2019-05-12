@@ -16,6 +16,8 @@ $space: 40px;
 $padding: $space;
 $margin: $space;
 
+$positions: top, right, bottom, left;
+
 // =================================
 // BREKPOINTS
 // =================================
@@ -67,24 +69,26 @@ $color_4_hover: lighten($color_4,15%);
 $color_5: #293241;
 $color_5_hover: lighten($color_5,15%);
 
-$color_error: #F05D5E;
-$color_warning: #EE964B;
-$color_info: #84DCC6;
-$color_success: #43AA8B;
+$color_error: #C20114;
+$color_warning: #DD4B1A;
+$color_info: #4BA3C3;
+$color_success: #8CBA80;
+
+$message_colors: $color_error $color_warning $color_info $color_success;
 
 // =================================
 // GRAYSCALE
 // =================================
 
 $white: #fff;
-$black: #000000;
+$black: #0C120C;
 
-$gray_extra_light: lighten($black,85%);
-$gray_light: lighten($black,75%);
-$gray: lighten($black,50%);
-$gray_middle: lighten($black,30%);
-$gray_dark: lighten($black,20%);
-$gray_extra_dark: lighten($black,15%);
+$gray_extra_light: #EFF7F3;
+$gray_light: #B3BFB9;
+$gray: #7C8C84;
+$gray_middle: #474A48;
+$gray_dark: #2C302E;
+$gray_extra_dark: #0C120C;
 
 
 // =================================
@@ -101,6 +105,8 @@ $border_default_style: solid;
 $border_default_color: $gray_extra_light;
 $border_color: $border_default_color;
 $border_default: $border_default_width $border_default_style $border_default_color;
+
+$border_radius: 5px;
 
 // -------- HR
 
@@ -217,7 +223,9 @@ $h_default_font: inherit;
 
 // ----- H1
 $h1_font: $h_default_font;
-$h1_size: 2.2em;
+// The following value must be the smaller size of this headline at smartphone breakpoint 
+// and will be increased of 0.2em for each breakpoint
+$h1_size: 1.5em; 
 $h1_color: $h_default_color;
 $h1_fontwheigth: $h_default_fontweight;
 $h1_small_size: $h_default_small_size;
@@ -227,7 +235,9 @@ $h1_padding: $h_default_padding;
 
 // ----- H2
 $h2_font: $h_default_font;
-$h2_size: 2em;
+// The following value must be the smaller size of this headline at smartphone breakpoint 
+// and will be increased of 0.2em for each breakpoint
+$h2_size: 1.4em; 
 $h2_color: $h_default_color;
 $h2_fontwheigth: $h_default_fontweight;
 $h2_small_size: $h_default_small_size;
@@ -237,7 +247,9 @@ $h2_padding: $h_default_padding;
 
 // ----- H3
 $h3_font: $h_default_font;
-$h3_size: 1.8em;
+// The following value must be the smaller size of this headline at smartphone breakpoint 
+// and will be increased of 0.2em for each breakpoint
+$h3_size: 1.3em; 
 $h3_color: $h_default_color;
 $h3_fontwheigth: $h_default_fontweight;
 $h3_small_size: $h_default_small_size;
@@ -247,7 +259,9 @@ $h3_padding: $h_default_padding;
 
 // ----- H4
 $h4_font: $h_default_font;
-$h4_size: 1.5em;
+// The following value must be the smaller size of this headline at smartphone breakpoint 
+// and will be increased of 0.2em for each breakpoint
+$h4_size: 1.2em; 
 $h4_color: $h_default_color;
 $h4_fontwheigth: $h_default_fontweight;
 $h4_small_size: $h_default_small_size;
@@ -257,7 +271,9 @@ $h4_padding: $h_default_padding;
 
 // ----- H5
 $h5_font: $h_default_font;
-$h5_size: 1.3em;
+// The following value must be the smaller size of this headline at smartphone breakpoint 
+// and will be increased of 0.2em for each breakpoint
+$h5_size: 1.1em; 
 $h5_color: $h_default_color;
 $h5_fontwheigth: $h_default_fontweight;
 $h5_small_size: $h_default_small_size;
@@ -267,7 +283,9 @@ $h5_padding: $h_default_padding;
 
 // ----- H6
 $h6_font: $h_default_font;
-$h6_size: 1.2em;
+// The following value must be the smaller size of this headline at smartphone breakpoint 
+// and will be increased of 0.2em for each breakpoint
+$h6_size: 1em; 
 $h6_color: $h_default_color;
 $h6_fontwheigth: $h_default_fontweight;
 $h6_small_size: $h_default_small_size;
@@ -288,4 +306,19 @@ $table_zebra_odd_background: $color_5;
 $table_zebra_even_color: inherit;
 $table_zebra_even_background: transparent;
 
+
+// FORMS
+// **************************
+$input_font_size: inherit;
+$input_font_color: inherit;
+$input_placeholder_size: inherit;
+$input_placeholder_color: inherit;
+$input_border_width: $border_default_width;
+$input_border_style: $border_default_style;
+$input_border_color: $border_default_color;
+$input_border_radius: 3px;
+
+$label_font_size: inherit;
+$label_font_color: inherit;
+$label_font_weight: inherit;
 
