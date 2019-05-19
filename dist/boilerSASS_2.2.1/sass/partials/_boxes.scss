@@ -1,0 +1,42 @@
+
+
+@mixin box_colors() {
+    &.box-white {
+        @include box-color($white,$black,$black);
+    }
+    &.box-black {
+        @include box-color($black,$white,false);
+    }
+    &.box-gray {
+        @include box-color($gray,$black,$black);
+    }
+    &.box-red {
+        @include box-color($red,$white,false);
+    }
+    &.box-purple {
+        @include box-color($purple,$red,$red);
+    }
+    &.box-green {
+        @include box-color($green,$yellow,$yellow);
+    }  
+    &.box-yellow {
+        @include box-color($yellow,$green,$green);
+    }
+    &.box-orange {
+        @include box-color($orange,$violet,$violet);
+    }
+    &.box-violet {
+        @include box-color($violet,$orange,$orange);
+    }
+}
+
+
+.box {
+    @include box(true);
+    @include box_colors();
+}
+
+.box-nopad {
+    @include box(false);
+    @include box_colors();
+}

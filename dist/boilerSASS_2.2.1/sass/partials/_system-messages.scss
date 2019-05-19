@@ -1,0 +1,17 @@
+$messages: error warning info success;
+$i: 1;
+
+
+.message {
+    
+    @include message_box();
+    
+    @each $message in $messages {
+        &.message-#{$message} {
+
+            @include message_box_color(nth($message_colors, $i));
+        }
+        $i: $i + 1;
+    }
+    
+}

@@ -19,21 +19,30 @@ From version **2.0.0** all external libs and packages was removed and project is
 
 
 ### Usage
+*   **Download BoileSASS** 
+    Download BoilerSASS project from [https://github.com/Gix075/boilerSass/releases](https://github.com/Gix075/boilerSass/releases) then extract `dist/boilerSASS_[version]` where you need. 
+    The `boilerSASS_[version]` dir will be the main directory for your new project and can be renamed as you need.
+    **Warning:** for new projects you must use only the files in `dist/boilerSASS_[version]`. The `src` must be used only for BoilerSASS developement
+
 *   **Install NPM components**  
-    Open you system console and access BoilerSASS directory on your desktop  
+    Open you system console and access `boilerSASS_[version]` directory on your desktop  
     then type `$ npm install`                  
 
 *   **Using SASS**  
     Once BoilerSASS is installed you can start coding Sass  
     Type `$ Grunt` on your console to first BoilerSASS compile and to start the _watch_ task that autocomile SASS files when changed and POSTCSS fix your css with all required prefixes.
 
-*   Customize your Gruntfile.js as you need!
+*   Customize your `dist/package.json` and `dist/Gruntfile.js` as you need!
 
 
 * * *
 
 
 ### History
+
+#### version 2.2.1
+* Bug fixed in button mixin
+* Bug fixed in margins and paddings utility classes
 
 #### version 2.2.0
 * Some sass code changed
