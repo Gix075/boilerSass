@@ -11,23 +11,23 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'src/',
                         src: 'sass/**',
-                        dest: 'dist/boilerSASS_<%= pkg.version %>/'  
+                        dest: 'dist/boilerSASS_<%= pkg.version %>/'
                     },
                     {
                         src: 'src/index.html',
-                        dest: 'dist/boilerSASS_<%= pkg.version %>/index.html'  
+                        dest: 'dist/boilerSASS_<%= pkg.version %>/index.html'
                     },
                     {
                         src: 'src/demo.html',
-                        dest: 'dist/boilerSASS_<%= pkg.version %>/demo.html'  
+                        dest: 'dist/boilerSASS_<%= pkg.version %>/demo.html'
                     },
                     {
                         src: 'src/grunt/package.json',
-                        dest: 'dist/boilerSASS_<%= pkg.version %>/package.json'  
+                        dest: 'dist/boilerSASS_<%= pkg.version %>/package.json'
                     },
                     {
                         src: 'src/grunt/Gruntfile.js',
-                        dest: 'dist/boilerSASS_<%= pkg.version %>/Gruntfile.js'  
+                        dest: 'dist/boilerSASS_<%= pkg.version %>/Gruntfile.js'
                     }
                 ]
             }
@@ -52,7 +52,7 @@ module.exports = function (grunt) {
                 map: true,
                 processors: [
                     require('pixrem')(), // add fallbacks for rem units
-                    require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+                    require('autoprefixer')(), // add vendor prefixes
                     require('cssnano')() // minify the result
                 ]
             },

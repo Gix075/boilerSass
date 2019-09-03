@@ -1,8 +1,8 @@
-/*  
+/*
  *  ***************************************************
  *  SIMPLE.SASS
  *  ***************************************************
- *  Simple SASS Boilerplate based on HTML5 Boilerplate 
+ *  Simple SASS Boilerplate based on HTML5 Boilerplate
  *  ***************************************************
 
  *  MIXINS FILE
@@ -12,7 +12,7 @@
 /* ============================================== */
 
 @mixin button() {
-    
+
     display: inline-block;
     background: $gray-dark;
     color: $white;
@@ -26,9 +26,9 @@
     outline-width: 0px;
     cursor: pointer;
     margin-bottom: 3px;
-    
+
     @include transition(all,0.2s,ease);
-    
+
     &:hover {
         color: $white;
         background: rgba($gray-dark,0.8);
@@ -42,7 +42,7 @@
         pointer-events: none;
         opacity: 0.5;
     }
-    
+
 }
 
 @mixin button-color($background,$color,$border_color) {
@@ -61,10 +61,10 @@
 }
 
 
-/*  
-    Icon Button 
+/*
+    Icon Button
     ------------------
-    This mixin show an icon at right or left of the button 
+    This mixin show an icon at right or left of the button
     Remember that this mixin require an icon font such as FontAwesome
 */
 
@@ -156,19 +156,19 @@
 // Title Sizes //
 // ********************** //
 @mixin h_title_size($base_font_size) {
-    
+
     font-size: $base_font_size;
-    
+
     $bps: $bps_list; // $bps_list is in variables.scss
     $font-size: $base_font_size;
-    
+
     @each $bp in $bps {
         $font-size: $font-size + 0.2;
         @media all and (min-width: #{$bp}) {
             font-size: $font-size;
         }
     }
-    
+
 }
 
 // Titles Style //
@@ -206,13 +206,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
- 
+
 // Placeholder //
 // ********************** //
 @mixin placeholder($color,$size,$weight) {
-    &::-webkit-input-placeholder {color:$arguments; font-size: $size; font-weight: $weight;}
-    &::-moz-placeholder {color:$arguments; font-size: $size; font-weight: $weight;}
-    &:-ms-input-placeholder {color:$arguments; font-size: $size; font-weight: $weight;}
+    &::-webkit-input-placeholder {color:$color; font-size: $size; font-weight: $weight;}
+    &::-moz-placeholder {color:$color; font-size: $size; font-weight: $weight;}
+    &:-ms-input-placeholder {color:$color; font-size: $size; font-weight: $weight;}
 }
 
 // Screen Reader Only //
@@ -228,10 +228,7 @@
     width: 1px;
 }
 
-@mixin sr-only() {
-    @include sr_only();
-}
- 
+
 // Position //
 // ********************** //
 @mixin place($top,$right,$bottom,$left) {
@@ -256,7 +253,7 @@
     border-color: $col;
 }
 
- 
+
 // BoxSizing //
 // ********************** //
 @mixin boxsizing($property) {
@@ -285,7 +282,7 @@
 /* TRANSITIONS */
 /* ============================================== */
 @mixin transition ( $property, $duration, $style) {
-    transition-property: $property;  
+    transition-property: $property;
     transition-duration: $duration;
     transition-timing-function: $style;
 }
@@ -293,17 +290,17 @@
 
 @mixin easeInQuad($duration) {
     transition: all $duration cubic-bezier(0.550, 0.085, 0.680, 0.530); /* easeInQuad */
-    transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530); /* easeInQuad */    
+    transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530); /* easeInQuad */
 }
 
 @mixin easeInCubic($duration) {
     transition: all $duration cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
-    transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */   
+    transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
 }
 
 @mixin easeInQuart($duration) {
     transition: all $duration cubic-bezier(0.895, 0.030, 0.685, 0.220); /* easeInQuart */
-    transition-timing-function: cubic-bezier(0.895, 0.030, 0.685, 0.220); /* easeInQuart */   
+    transition-timing-function: cubic-bezier(0.895, 0.030, 0.685, 0.220); /* easeInQuart */
 }
 
 @mixin easeInQuint($duration) {
@@ -412,34 +409,34 @@
 }
 
 
- 
+
 // Transforms //
 // ********************** //
 @mixin transform ( $transformProperties ) {
     transform: $transformProperties;
 }
- 
+
 // Transforms > Translate //
 // ********************** //
 @mixin translate ( $x, $y ) {
     transform: translate($x,$y);
 }
- 
+
 @mixin translate-50Y {
     transform: translateY(-50%);
 }
- 
+
 @mixin translate-50X {
     transform: translateX(-50%);
 }
- 
+
 @mixin translate-50 {
     transform: translate(-50%,-50%);
 }
- 
 
 
-// Ratio Mixin 
+
+// Ratio Mixin
 // ********************** //
 @mixin ratio_16-9 {
     position: relative;

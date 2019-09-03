@@ -19,17 +19,17 @@ From version **2.0.0** all external libs and packages was removed and project is
 
 
 ### Usage
-*   **Download BoileSASS** 
-    Download BoilerSASS project from [https://github.com/Gix075/boilerSass/releases](https://github.com/Gix075/boilerSass/releases) then extract `dist/boilerSASS_[version]` where you need. 
+*   **Download BoileSASS**
+    Download BoilerSASS project from [https://github.com/Gix075/boilerSass/releases](https://github.com/Gix075/boilerSass/releases) then extract `dist/boilerSASS_[version]` where you need.
     The `boilerSASS_[version]` dir will be the main directory for your new project and can be renamed as you need.
     **Warning:** for new projects you must use only the files in `dist/boilerSASS_[version]`. The `src` must be used only for BoilerSASS developement
 
-*   **Install NPM components**  
-    Open you system console and access `boilerSASS_[version]` directory on your desktop  
-    then type `$ npm install`                  
+*   **Install NPM components**
+    Open you system console and access `boilerSASS_[version]` directory on your desktop
+    then type `$ npm install`
 
-*   **Using SASS**  
-    Once BoilerSASS is installed you can start coding Sass  
+*   **Using SASS**
+    Once BoilerSASS is installed you can start coding Sass
     Type `$ Grunt` on your console to first BoilerSASS compile and to start the _watch_ task that autocomile SASS files when changed and POSTCSS fix your css with all required prefixes.
 
 *   Customize your `dist/package.json` and `dist/Gruntfile.js` as you need!
@@ -39,6 +39,10 @@ From version **2.0.0** all external libs and packages was removed and project is
 
 
 ### History
+
+#### version 2.2.2
+* Bug fixed for sr_only mixin
+* Bug fixed in placeholder mixin
 
 #### version 2.2.1
 * Bug fixed in button mixin
@@ -93,7 +97,7 @@ From version **2.0.0** all external libs and packages was removed and project is
 
 #### version 1.7.0
 * AnimateCSS added to the project
-* Installation bug fixed 
+* Installation bug fixed
 
 #### version 1.6.0
 * Mixins added
@@ -124,4 +128,4 @@ From version **2.0.0** all external libs and packages was removed and project is
 #### version 1.0.0
 * First porting of **boilerLESS**
 
-_**boilerSASS** is the SASS version of the previous https://github.com/Gix075/boilerLess_ 
+_**boilerSASS** is the SASS version of the previous https://github.com/Gix075/boilerLess_

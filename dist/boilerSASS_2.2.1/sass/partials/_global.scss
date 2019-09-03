@@ -120,6 +120,14 @@ strong {
     font-weight: $font_base_strong_weight;
 }
 
+pre {
+    margin: 0 0 $margin/2 0;
+    background: $gray_light;
+    border: $border_default_width $border_default_style $gray;
+    border-radius: $border_radius;
+    padding: $padding/4 $padding/4 0 $padding/4;
+}
+
 
 /*  ==========================================================================
     Browser Upgrade Prompt

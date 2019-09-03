@@ -28,40 +28,82 @@ $grid_padding: $padding/2;
             flex: 1;
         }
         
+        &.size-10,
+        &.size-15,
         &.size-20,
         &.size-25,
+        &.size-30,
         &.size-33,
+        &.size-35,
+        &.size-40,
+        &.size-45,
         &.size-50,
-        &.size-75 {
-            flex: auto;
-            width: 100%;
+        &.size-60,
+        &.size-65,
+        &.size-70,
+        &.size-75,
+        &.size-80,
+        &.size-85,
+        &.size-90,
+        &.size-95 {
+            flex: 0 0 100%;
         }
         
         @media all and (min-width: $bp_tablet_large) {
-            &.size-20,
-            &.size-25,
-            &.size-50 {
-                flex: auto;
-                width: 50%;
+            
+            &.size-10 {
+                flex: 0 0 10%;
             }
-            &.size-33 {
-                flex: auto;
-                width: 33.3333%;
+            &.size-15 {
+                flex: 0 0 15%;
             }
-            &.size-75 {
-                flex: auto;
-                width: 75%;
-            }
-        }
-        
-        @media all and (min-width: $bp_tablet_large) {
             &.size-20 {
-                flex: auto;
-                width: 20%;
+                flex: 0 0 20%;
             }
             &.size-25 {
-                flex: auto;
-                width: 25%;
+                flex: 0 0 25%;
+            }
+            &.size-30 {
+                flex: 0 0 30%;
+            }
+            &.size-33 {
+                flex: 0 0 33.3333%;
+            }
+            &.size-40 {
+                flex: 0 0 40%;
+            }
+            &.size-45 {
+                flex: 0 0 45%;
+            }
+            &.size-50 {
+                flex: 0 0 50%;
+            }
+            &.size-55 {
+                flex: 0 0 55%;
+            }
+            &.size-60 {
+                flex: 0 0 60%;
+            }
+            &.size-65 {
+                flex: 0 0 65%;
+            }
+            &.size-70 {
+                flex: 0 0 70%;
+            }
+            &.size-75 {
+                flex: 0 0 75%;
+            }
+            &.size-80 {
+                flex: 0 0 80%;
+            }
+            &.size-85 {
+                flex: 0 0 85%;
+            }
+            &.size-90 {
+                flex: 0 0 90%;
+            }
+            &.size-95 {
+                flex: 0 0 95%;
             }
         }
         
@@ -134,18 +176,18 @@ $grid_padding: $padding/2;
         
         @media all and (min-width: $bp_tablet_large) {
             
-            margin: 0 -$grid_margin;
+            margin: 0 -#{$grid_margin};
             
             &.columns-2,
             &.columns-4,
             &.columns-5 {
                 .flexgrid-item {
-                    width: calc(50% - #{$grid_margin*2});
+                    flex: 0 0 calc(50% - #{$grid_margin*2});
                 }
             }
             &.columns-3 {
                 .flexgrid-item {
-                    width: calc(33.3333% - #{$grid_margin*2});
+                    flex: 0 0 calc(33.3333% - #{$grid_margin*2});
                 }
             }
         }
@@ -153,42 +195,79 @@ $grid_padding: $padding/2;
         @media all and (min-width: $bp_tablet_large) {
             &.columns-4 {
                 .flexgrid-item {
-                    width: calc(25% - #{$grid_margin*2});
+                    flex: 0 0 calc(25% - #{$grid_margin*2});
                 }
             }
             &.columns-5 {
                 .flexgrid-item {
-                    width: calc(20% - #{$grid_margin*2});
+                    flex: 0 0 calc(20% - #{$grid_margin*2});
                 }
             }
         }
         
         .flexgrid-item {
             
-            margin: $grid_margin $grid_margin $grid_margin*2 $grid_margin;
+            margin: 0 $grid_margin $grid_margin*2 $grid_margin;
             
             @media all and (min-width: $bp_tablet_large) {
-                &.size-20,
-                &.size-25,
-                &.size-50 {
-                    width: calc(50% - #{$grid_margin*2});
+                
+                &.size-10 {
+                    flex: 0 0 calc(10% - #{$grid_margin*2});
                 }
-                &.size-33 {
-                    width: calc(33.3333% - #{$grid_margin*2});
+                &.size-15 {
+                    flex: 0 0 calc(15% - #{$grid_margin*2});
                 }
-                &.size-75 {
-                    width: calc(75% - #{$grid_margin*2});
-                }
-            }
-
-            @media all and (min-width: $bp_tablet_large) {
                 &.size-20 {
-                    width: calc(20% - #{$grid_margin*2});
+                    flex: 0 0 calc(20% - #{$grid_margin*2});
                 }
                 &.size-25 {
-                    width: calc(25% - #{$grid_margin*2});
+                    flex: 0 0 calc(25% - #{$grid_margin*2});
                 }
+                &.size-30 {
+                    flex: 0 0 calc(30% - #{$grid_margin*2});
+                }
+                &.size-33 {
+                    flex: 0 0 calc(33.3333% - #{$grid_margin*2});
+                }
+                &.size-40 {
+                    flex: 0 0 calc(40% - #{$grid_margin*2});
+                }
+                &.size-45 {
+                    flex: 0 0 calc(45% - #{$grid_margin*2});
+                }
+                &.size-50 {
+                    flex: 0 0 calc(50% - #{$grid_margin*2});
+                }
+                &.size-55 {
+                    flex: 0 0 calc(55% - #{$grid_margin*2});
+                }
+                &.size-60 {
+                    flex: 0 0 calc(60% - #{$grid_margin*2});
+                }
+                &.size-65 {
+                    flex: 0 0 calc(65% - #{$grid_margin*2});
+                }
+                &.size-70 {
+                    flex: 0 0 calc(70% - #{$grid_margin*2});
+                }
+                &.size-75 {
+                    flex: 0 0 calc(75% - #{$grid_margin*2});
+                }
+                &.size-80 {
+                    flex: 0 0 calc(80% - #{$grid_margin*2});
+                }
+                &.size-85 {
+                    flex: 0 0 calc(85% - #{$grid_margin*2});
+                }
+                &.size-90 {
+                    flex: 0 0 calc(90% - #{$grid_margin*2});
+                }
+                &.size-95 {
+                    flex: 0 0 calc(95% - #{$grid_margin*2});
+                }
+                
             }
+
         }
         
         
@@ -243,27 +322,62 @@ $grid_padding: $padding/2;
         .flexgrid-item {
             
             @media all and (min-width: $bp_tablet) {
-                &.size-20,
-                &.size-25,
-                &.size-50 {
-                    width: 49%;
+                &.size-10 {
+                    flex: 0 0 9%;
                 }
-                &.size-33 {
-                    width: 32%;
+                &.size-15 {
+                    flex: 0 0 14%;
                 }
-                &.size-75 {
-                    width: 74%;
-                }
-            }
-            
-            @media all and (min-width: $bp_tablet_large) {
                 &.size-20 {
-                    width: 19%;
+                    flex: 0 0 19%;
                 }
                 &.size-25 {
-                    width: 24%;
+                    flex: 0 0 24%;
+                }
+                &.size-30 {
+                    flex: 0 0 29%;
+                }
+                &.size-33 {
+                    flex: 0 0 32%;
+                }
+                &.size-40 {
+                    flex: 0 0 39%;
+                }
+                &.size-45 {
+                    flex: 0 0 44%;
+                }
+                &.size-50 {
+                    flex: 0 0 49%;
+                }
+                &.size-55 {
+                    flex: 0 0 54%;
+                }
+                &.size-60 {
+                    flex: 0 0 59%;
+                }
+                &.size-65 {
+                    flex: 0 0 64%;
+                }
+                &.size-70 {
+                    flex: 0 0 69%;
+                }
+                &.size-75 {
+                    flex: 0 0 74%;
+                }
+                &.size-80 {
+                    flex: 0 0 79%;
+                }
+                &.size-85 {
+                    flex: 0 0 84%;
+                }
+                &.size-90 {
+                    flex: 0 0 89%;
+                }
+                &.size-95 {
+                    flex: 0 0 94%;
                 }
             }
+
             
         }
     }

@@ -30,13 +30,23 @@
     }
 }
 
+@mixin boxTitles_marginReset() {
+    @for $i from 1 to 5 {
+        h#{$i} {
+            margin-top: 0;
+        }
+    }
+}
+
 
 .box {
     @include box(true);
     @include box_colors();
+    @include boxTitles_marginReset();
 }
 
 .box-nopad {
     @include box(false);
     @include box_colors();
+    @include boxTitles_marginReset();
 }
