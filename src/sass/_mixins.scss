@@ -145,17 +145,40 @@
     }
 }
 
+// #######################################################################
+
 // Lists //
-// ********************** //
-@mixin resetlist {
+
+/*
+    **********************
+    * This mixin reset the default browser stile for lists
+    * This mixin is thinked for unordered lists
+    *
+    * ARGUMENT $reset_spaces (default is true)
+    * is a bool value for reset the spaces (margin and padding) around the list
+    **********************
+*/
+
+@mixin resetlist($reset_spaces: true) {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
+// #######################################################################
+
 // Title Sizes //
-// ********************** //
-@mixin h_title_size($base_font_size) {
+
+/*
+    **********************
+    * This mixin set a responsive font scaling thinked for H tags
+    * This mixin is based on breakpoints array defined in variables.scss
+    *
+    * ARGUMENT $base_font_size (default is 1em)
+    * is the value for the smallest font size defined for smartphone view
+    **********************
+*/
+@mixin h_title_size($base_font_size: 1em) {
 
     font-size: $base_font_size;
 

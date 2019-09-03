@@ -41,6 +41,24 @@
     This mixin show an icon at right or left of the button
     Remember that this mixin require an icon font such as FontAwesome
 */
+/*
+    **********************
+    * This mixin reset the default browser stile for lists
+    * This mixin is thinked for unordered lists
+    *
+    * ARGUMENT $reset_spaces (default is true)
+    * is a bool value for reset the spaces (margin and padding) around the list
+    **********************
+*/
+/*
+    **********************
+    * This mixin set a responsive font scaling thinked for H tags
+    * This mixin is based on breakpoints array defined in variables.scss
+    *
+    * ARGUMENT $base_font_size (default is 1em)
+    * is the value for the smallest font size defined for smartphone view
+    **********************
+*/
 /* TRANSITIONS */
 /* ============================================== */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -1690,7 +1708,7 @@ ul li, ol li {
 .message {
   padding: 10px;
   border-radius: 5px; }
-  /* line 191, /LAVORI-WEB-GIX075/GitHub/boilerSass/src/sass/_mixins.scss */
+  /* line 214, /LAVORI-WEB-GIX075/GitHub/boilerSass/src/sass/_mixins.scss */
   .message h1, .message h2, .message h3, .message h4, .message h5, .message h6, .message p {
     margin: 0; }
   /* line 10, /LAVORI-WEB-GIX075/GitHub/boilerSass/src/sass/partials/_system-messages.scss */
