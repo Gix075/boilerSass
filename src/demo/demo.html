@@ -10,21 +10,149 @@
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/boilerSass.css">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/boilerSass.css">
+        <link rel="stylesheet" href="css/demo.css">
+        
         <style>
             .page-wrapper {
                 width: 80%;
                 margin: 0 auto;
             }
         </style>
+        
     </head>
     <body>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
+        <header>
+            <h1 class="logo">boilerSASS<small>Simple boilerplate for SASS/SCSS projects</small></h1>
+        </header>
+        
+        <section class="wide section-yellow">
+            <p class="font-large">
+                <strong>boilerSASS</strong> is very simple and easy to use.<br>
+                You can integrate it in any project and with other libraries or frameworks like Bootstrap, jQueryUI and so on.
+            </p>
+        </section>
+        
+        <section>
+            <h2 class="uppercase font-black">Install and Use</h2>
+            <p class="font-large">
+                In order to install and use <strong>boilerSASS</strong> simply 
+            </p>
+            <ol class="font-larger font-regular">
+                <li>download it from GitHub</li>
+                <li>enter in <em>dist</em>, get the <em>sass</em> directory and import it in your project as you need</li>
+                <li>customize the <em>Gruntfile.js</em> if you want to use Grunt or setup you task processor</li>
+                <li>open <em>sass/_variables.scss</em> and customize values as you need</li>
+                <li>open <em>sass/_mixins.scss</em> and customize mixins as you need</li>
+                <li>open <em>sass/boilerSass.scss</em> and customize it as you need, you can remove the @import that you don't need and add your own partials.</li>
+            </ol>
+        </section>
+        <hr>
+        
+        <section>
+            <h2 class="uppercase font-black">Framework</h2>
+            <p class="font-large">
+                <strong>boilerSass</strong> provide also a little CSS framework with grid, buttons, typography and so on.<br>
+                You can simply remove the style you don't nedd removing the partials import in boilerSass.scss.
+            </p>
+        </section>
+        
+        <section class="wide section-yellow">
+            <h2 class="uppercase font-black">Framework demo</h2>
+        </section>
+        
+        <section id="typography">
+            
+            <h3>Typography</h3>
+            <p>All boilerSASS typography</p>
+            <hr>
+            
+            <div class="flexgrid">
+                
+                <div class="flexgrid-item">
+                    <h2 class="uppercase yellow">Headings and Paragraphs</h2>
+                    <h1>boilerSASS Heading H1</h1>
+                    <h2>boilerSASS Heading H2</h2>
+                    <h3>boilerSASS Heading H3</h3>
+                    <h4>boilerSASS Heading H4</h4>
+                    <h5>boilerSASS Heading H4</h5>
+                    <h6>boilerSASS Heading H6</h6>
+                    <p>
+                        This is an example of paragraph <br>
+                        After I fell off my toilet, I drew this. (He holds up a crude drawing of the flux capacitor.)
+                        Flux capacitor. It works, (laughs), it works. 
+                        I finally invent something that works. Bet your ass it works. 
+                        Well, now we gotta sneak this back into my laboratory, we've gotta get you home.
+                    </p>
+                    
+                    
+                    <h2 class="uppercase yellow">Typography Helper Classes</h2>
+                    <p>
+                        Some example of typography helper classes usage:
+                    </p>
+                    <p>
+                        <span class="uppercase">This text is lowercase but transformed in uppercase by <strong class="lowercase">.uppercase</strong> class</span><br>
+                        <span class="capitalize">This text is lowercase but transformed in capitalize by <strong class="lowercase">.capitalize</strong> class</span><br>
+                        <span class="lowercase">THIS TEXT IS UPPERCASE BUT TRANSFORMED IN LOWERCASE BY <strong>.lowercase</strong> CLASS</span><br>
+                        <span class="font-mini">This string has <strong>.font-mini</strong> class.</span>
+                        <span class="font-small">This string has <strong>.font-small</strong> class.</span>
+                        <span class="font-smaller">This string has <strong>.font-smaller</strong> class.</span><br>
+                        <span class="font-larger">This string has <strong>.font-larger</strong> class.</span>
+                        <span class="font-large">This string has <strong>.font-large</strong> class.</span><br>
+                        <span class="font-big">This string has <strong>.font-big</strong> class.</span><br>
+                        <span class="font-light">This string has <strong>.font-light</strong> class.</span> 
+                        <span class="font-regular">This string has <strong>.font-regular</strong> class.</span>
+                        <span class="font-medium">This string has <strong>.font-medium</strong> class.</span>
+                        <span class="font-bold">This string has <strong>.font-bold</strong> class.</span><br>
+                        <span class="important">This string has <strong>.important</strong> class.</span> 
+                        <span class="very-important">This string has <strong>.very-important</strong> class.</span><br>
+                        <span class="important font-large">This string has <strong>.important</strong> and <strong>.font-large</strong> classes.</span> 
+                    </p>
+                    
+                </div>
+                
+                <div class="flexgrid-item">
+                    <h2 class="uppercase yellow">Lists</h2>
+                    <p>Two example of list usage:</p>
+                    <ul>
+                        <li>
+                            I dunno, Doc, you're the one whose always saying, you know, it's not too good to know too much about your own destiny.<br>
+                            You're right, Marty ... I know too much already. Better that I not attempt to uncover the circumstances of my own... future.<br>
+                            Copernicus! Come home boy! I'll get him Doc. Copernicus! (Copernicus is whining.) Come on, let's go home, boy.
+                        </li>
 
+                        <li>
+                            I dunno, Doc, you're the one whose always saying, you know, it's not too good to know too much about your own destiny.<br>
+                            You're right, Marty ... I know too much already. Better that I not attempt to uncover the circumstances of my own... future.<br>
+                            Copernicus! Come home boy! I'll get him Doc. Copernicus! (Copernicus is whining.) Come on, let's go home, boy.
+                        </li>
+
+                    </ul>
+
+                    <ol>
+                        <li>
+                            I dunno, Doc, you're the one whose always saying, you know, it's not too good to know too much about your own destiny.<br>
+                            You're right, Marty ... I know too much already. Better that I not attempt to uncover the circumstances of my own... future.<br>
+                            Copernicus! Come home boy! I'll get him Doc. Copernicus! (Copernicus is whining.) Come on, let's go home, boy.
+                        </li>
+
+                        <li>
+                            I dunno, Doc, you're the one whose always saying, you know, it's not too good to know too much about your own destiny.<br>
+                            You're right, Marty ... I know too much already. Better that I not attempt to uncover the circumstances of my own... future.<br>
+                            Copernicus! Come home boy! I'll get him Doc. Copernicus! (Copernicus is whining.) Come on, let's go home, boy.
+                        </li>
+
+                    </ol>
+                </div>
+                
+            </div>
+        </section>
+        
         <div class="page-wrapper">
             
             <h1>Tipography</h1>

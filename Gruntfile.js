@@ -56,12 +56,12 @@ module.exports = function (grunt) {
                     require('cssnano')() // minify the result
                 ]
             },
-            dist: {
+            dev: {
                 files: {
                     'src/css/boilerSass.css': 'src/css/boilerSass.css'
                 }
             },
-            dev: {
+            dist: {
                 files: {
                     'dist/boilerSASS_<%= pkg.version %>/css/boilerSass.css': 'dist/boilerSASS_<%= pkg.version %>/css/boilerSass.css'
                 }

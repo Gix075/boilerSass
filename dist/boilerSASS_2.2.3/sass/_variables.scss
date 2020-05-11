@@ -12,7 +12,7 @@
 // SIZES VARS
 // =================================
 
-$space: 40px;
+$space: 2.5rem;
 $padding: $space;
 $margin: $space;
 
@@ -191,11 +191,11 @@ $text_important_background: $font_base_color;
 $text_important_color: $white;
 
 // PARAGRAPHS
-$p_margin: 0 0 $space/2 0;
+$p_margin: 0 0 $space 0;
 $p_padding: 0;
 $p_size: inherit;
 $p_color: inherit;
-$p_lineheight: 1.4em;
+$p_lineheight: 1.5em;
 
 // LISTS
 
@@ -205,7 +205,7 @@ $ul_margin: 0 0 $space 0;
 $ul_padding: 0 0 0 $space;
 
 // ---- Ordered List
-$ol_margin: 0;
+$ol_margin: 0 0 $space 0;
 $ol_padding: 0 0 0 $space;
 
 $list_li_lineheight: $p_lineheight;
@@ -215,7 +215,7 @@ $list_li_padding: 0;
 // HEADLINES
 // **************************
 
-$h_default_margin: 0.5em 0 0.3em 0;
+$h_default_margin: 0 0 0.5em 0;
 $h_default_padding: 0;
 $h_default_small_color: $gray_middle;
 $h_default_small_size: 0.5em;
@@ -229,7 +229,7 @@ $h_default_font: inherit;
 $h1_font: $h_default_font;
 // The following value (from version 2.1.0) must be the smaller size of this headline at smartphone breakpoint 
 // and will be increased of 0.2em for each breakpoint
-$h1_size: 1.5em; 
+$h1_size: 2rem; 
 $h1_color: $h_default_color;
 $h1_fontwheigth: $h_default_fontweight;
 $h1_small_size: $h_default_small_size;
@@ -244,7 +244,7 @@ $h1_small_map: (size: $h1_small_size, color: $h1_small_color);
 $h2_font: $h_default_font;
 // The following value (from version 2.1.0) must be the smaller size of this headline at smartphone breakpoint 
 // and will be increased of 0.2em for each breakpoint
-$h2_size: 1.4em; 
+$h2_size: 1.8rem; 
 $h2_color: $h_default_color;
 $h2_fontwheigth: $h_default_fontweight;
 $h2_small_size: $h_default_small_size;
@@ -259,7 +259,7 @@ $h2_small_map: (size: $h2_small_size, color: $h2_small_color);
 $h3_font: $h_default_font;
 // The following value (from version 2.1.0) must be the smaller size of this headline at smartphone breakpoint 
 // and will be increased of 0.2em for each breakpoint
-$h3_size: 1.3em; 
+$h3_size: 1.6rem; 
 $h3_color: $h_default_color;
 $h3_fontwheigth: $h_default_fontweight;
 $h3_small_size: $h_default_small_size;
@@ -274,7 +274,7 @@ $h3_small_map: (size: $h3_small_size, color: $h3_small_color);
 $h4_font: $h_default_font;
 // The following value (from version 2.1.0) must be the smaller size of this headline at smartphone breakpoint 
 // and will be increased of 0.2em for each breakpoint
-$h4_size: 1.2em; 
+$h4_size: 1.4rem; 
 $h4_color: $h_default_color;
 $h4_fontwheigth: $h_default_fontweight;
 $h4_small_size: $h_default_small_size;
@@ -289,7 +289,7 @@ $h4_small_map: (size: $h4_small_size, color: $h4_small_color);
 $h5_font: $h_default_font;
 // The following value (from version 2.1.0) must be the smaller size of this headline at smartphone breakpoint 
 // and will be increased of 0.2em for each breakpoint
-$h5_size: 1.1em; 
+$h5_size: 1.2rem; 
 $h5_color: $h_default_color;
 $h5_fontwheigth: $h_default_fontweight;
 $h5_small_size: $h_default_small_size;
@@ -304,7 +304,7 @@ $h5_small_map: (size: $h5_small_size, color: $h5_small_color);
 $h6_font: $h_default_font;
 // The following value (from version 2.1.0) must be the smaller size of this headline at smartphone breakpoint 
 // and will be increased of 0.2em for each breakpoint
-$h6_size: 1em; 
+$h6_size: 1rem; 
 $h6_color: $h_default_color;
 $h6_fontwheigth: $h_default_fontweight;
 $h6_small_size: $h_default_small_size;

@@ -222,6 +222,20 @@
     border: 1px solid darken($base_color, 10%);
 }
 
+
+// Columns //
+// ********************** //
+@mixin columns($count: 2,$gap: $space/2) {
+    column-count: $count;
+    column-gap: $gap;
+}
+
+@mixin columns_rule($rule: $border_default) {
+    column-rule: $rule;
+}
+
+
+
 // Ellipsis //
 // ********************** //
 @mixin ellipsis {
@@ -299,7 +313,6 @@
     *zoom: 1;
 }
 
-//@mixin cfix
 
 
 /* TRANSITIONS */

@@ -27,7 +27,7 @@ $grid_padding: $padding/2;
         @media all and (min-width: $bp_tablet_large) {
             flex: 1;
         }
-        
+        /*
         &.size-10,
         &.size-15,
         &.size-20,
@@ -47,7 +47,7 @@ $grid_padding: $padding/2;
         &.size-90,
         &.size-95 {
             flex: 0 0 100%;
-        }
+        }*/
         
         @media all and (min-width: $bp_tablet_large) {
             
@@ -116,8 +116,7 @@ $grid_padding: $padding/2;
     &.columns-4,
     &.columns-5 {
         .flexgrid-item {
-            flex: auto;
-            width: 100%;
+            flex: 0 0 100%;
         }
     }
     
@@ -127,12 +126,12 @@ $grid_padding: $padding/2;
         &.columns-4,
         &.columns-5 {
             .flexgrid-item {
-                width: 50%;
+                flex: 0 0 50%;
             }
         }
         &.columns-3 {
             .flexgrid-item {
-                width: 33.3333%;
+                flex: 0 0 33.3333%;
             }
         }
     }
@@ -140,12 +139,12 @@ $grid_padding: $padding/2;
     @media all and (min-width: $bp_tablet_large) {
         &.columns-4 {
             .flexgrid-item {
-                width: 25%;
+                flex: 0 0 25%;
             }
         }
         &.columns-5 {
             .flexgrid-item {
-                width: 20%;
+                flex: 0 0 20%;
             }
         }
     }
@@ -163,20 +162,18 @@ $grid_padding: $padding/2;
     // *************************************
     &.margined {
         
-        margin: 0;
+        margin: 0 -#{$grid_margin};
         
         &.columns-2,
         &.columns-3,
         &.columns-4
         &.columns-5, {
             .flexgrid-item {
-                width: 100%;
+                flex: 0 0 calc(100% - #{$grid_margin*2});
             }
         }
         
         @media all and (min-width: $bp_tablet_large) {
-            
-            margin: 0 -#{$grid_margin};
             
             &.columns-2,
             &.columns-4,

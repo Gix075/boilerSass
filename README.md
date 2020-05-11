@@ -40,6 +40,9 @@ From version **2.0.0** all external libs and packages was removed and project is
 
 ### History
 
+#### version 2.2.3
+* Bug fixed in flex grid
+
 #### version 2.2.2
 * Bug fixed for sr_only mixin
 * Bug fixed in placeholder mixin

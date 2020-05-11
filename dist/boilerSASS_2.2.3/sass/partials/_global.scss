@@ -21,7 +21,7 @@ body {
     font-weight: $font_base_weight;
     font-size: $font_base_size_phone;
     color: $font_base_color;
-    line-height: $font_base_lineheight;
+    //line-height: $font_base_lineheight;
     @media all and (min-width: $bp_tablet) {
         font-size: $font_base_size_tablet;
     }

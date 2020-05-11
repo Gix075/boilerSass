@@ -47,17 +47,17 @@
  
 // --> resets 
 .no-marg {
-    margin: 0;
+    margin: 0!important;
 }
 
 .no-marg-ver {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
 }
 
 .no-marg-hor {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0!important;
+    margin-right: 0!important;
 }
  
 // --> assignment
@@ -112,7 +112,7 @@
     
     // --> selective resets 
     .no-marg-#{$pos} {
-        margin-#{$pos}: 0;
+        margin-#{$pos}: 0!important;
     }
     
     // --> selective assignment 
@@ -136,17 +136,17 @@
 /*  ========================================================================== */
 // --> resets 
 .no-pad {
-    padding: 0;
+    padding: 0!important;
 }
 
 .no-pad-ver {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 0!important;
+    padding-bottom: 0!important;
 }
 
 .no-pad-hor {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0!important;
+    padding-right: 0!important;
 }
  
 // --> assignment
@@ -184,8 +184,8 @@
     padding-left: $padding;
     padding-right: $padding;
     &.half {
-        padding-top: $padding/2;
-        padding-bottom: $padding/2;
+        padding-left: $padding/2;
+        padding-right: $padding/2;
     }
     &.quarter {
         padding-left: $padding/4;
@@ -203,7 +203,7 @@
     
     // --> selective resets 
     .no-pad-#{$pos} {
-        padding-#{$pos}: 0;
+        padding-#{$pos}: 0!important;
     }
     
     // --> selective assignment 

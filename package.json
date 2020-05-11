@@ -1,6 +1,6 @@
 {
   "name": "boilersass",
-  "version": "2.2.1",
+  "version": "2.2.3",
   "description": "Simple SASS Boilerplate",
   "main": "sass/boilerSass.scss",
   "scripts": {
