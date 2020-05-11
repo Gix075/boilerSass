@@ -25,8 +25,8 @@ From version **2.0.0** all external libs and packages was removed and project is
     **Warning:** for new projects you must use only the files in `dist/boilerSASS_[version]`. The `src` must be used only for BoilerSASS developement
 
 *   **Install NPM components**
-    Open you system console and access `boilerSASS_[version]` directory on your desktop
-    then type `$ npm install`
+    Open the package.json file and edit the values for _name_ and _version_, then
+    open you system console and access `boilerSASS_[version]` directory on your desktop then type `$ npm install`
 
 *   **Using SASS**
     Once BoilerSASS is installed you can start coding Sass
