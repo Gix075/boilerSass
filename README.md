@@ -40,6 +40,13 @@ From version **2.0.0** all external libs and packages was removed and project is
 
 ### History
 
+#### version 2.3.0
+* New mixins and classes added
+* Normalize.css updated to version 8.0.1
+* _grid.scss partials renamed in _columns.scss
+* Code cleaning
+* Old deprecated mixins removed
+
 #### version 2.2.3
 * Bug fixed in flex grid
 

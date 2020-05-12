@@ -10,18 +10,8 @@
 
 // Probably you can modify this style, simply editing the "_variables.scss" and "_mixins.scss" files
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-template-rows: auto;
-    grid-gap: 1rem;
-    .grid-item {
-        
-    }
-}
-
 // Simple columns division
-.columns_2 {
+.simple_columns_2 {
     @include columns(2,$space);
     @include columns_rule();
     &.small-gap {
@@ -29,7 +19,7 @@
     }
 }
 
-.columns_3 {
+.simple_columns_3 {
     @include columns(3,$space);
     @include columns_rule();
     &.small-gap {
@@ -37,7 +27,7 @@
     }
 }
 
-.columns_4 {
+.simple_columns_4 {
     @include columns(4,$space);
     @include columns_rule();
     &.small-gap {
@@ -45,7 +35,7 @@
     }
 }
 
-.columns_5 {
+.simple_columns_5 {
     @include columns(5,$space);
     @include columns_rule();
     &.small-gap {
@@ -53,10 +43,10 @@
     }
 }
 
-.columns_2,
-.columns_3,
-.columns_4,
-.columns_5 {
+.simple_columns_2,
+.simple_columns_3,
+.simple_columns_4,
+.simple_columns_5 {
     &.no-rule {
         column-rule: 0;
     }

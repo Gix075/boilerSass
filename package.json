@@ -1,6 +1,6 @@
 {
   "name": "boilersass",
-  "version": "2.2.3",
+  "version": "2.3.0",
   "description": "Simple SASS Boilerplate",
   "main": "sass/boilerSass.scss",
   "scripts": {
@@ -22,9 +22,6 @@
   "bugs": {
     "url": "https://github.com/Gix075/boilerSass/issues"
   },
-  "src": "src",
-  "dist": "dist",
-  "test": "test",
   "homepage": "https://github.com/Gix075/boilerSass#readme",
   "dependencies": {
     "autoprefixer": "^9.3.1",

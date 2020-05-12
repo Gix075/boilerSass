@@ -8,8 +8,111 @@
  *  MIXINS FILE
 */
 
-/* Links and Buttons */
-/* ============================================== */
+// #######################################################################
+// TYPOGRAPHY MIXINS
+// #######################################################################
+
+// Pixel to Rem conversion //
+// ********************** // 
+// based to $font_base_size variable //
+
+@mixin pxToRem($size) {
+    $rem: $size / $font_base_size;
+    $rem_size: $rem * 1rem;
+    font-size: $rem_size;
+}
+
+// Lists //
+
+/*
+    **********************
+    * This mixin reset the default browser stile for lists
+    * This mixin is thinked for unordered lists
+    *
+    * ARGUMENT $reset_spaces (default is true)
+    * is a bool value for reset the spaces (margin and padding) around the list
+    **********************
+*/
+
+@mixin resetlist($reset_spaces: true) {
+    @if $reset_spaces == true {
+        margin: 0;
+        padding: 0;
+    }
+    list-style-type: none;
+}
+
+// Title Sizes //
+
+/*
+    **********************
+    * This mixin set a responsive font scaling thinked for H tags
+    * This mixin is based on breakpoints array defined in variables.scss
+    *
+    * ARGUMENT $base_font_size (default is 1em)
+    * is the value for the smallest font size defined for smartphone view
+    **********************
+*/
+
+@mixin h_title_size($base_font_size: 1em) {
+
+    font-size: $base_font_size;
+
+    $bps: $bps_list; // $bps_list is in variables.scss
+    $font-size: $base_font_size;
+
+    @each $bp in $bps {
+        $font-size: $font-size + 0.2;
+        @media all and (min-width: #{$bp}) {
+            font-size: $font-size;
+        }
+    }
+
+}
+
+// Titles Style //
+// ********************** //
+
+@mixin h_title_style($h_map, $h_small_map) {
+    font-family: map-get($h_map, "font");
+    font-weight: map-get($h_map, "weight");
+    color: map-get($h_map, "color");
+    padding: map-get($h_map, "padding");
+    margin: map-get($h_map, "margin");
+    small {
+        color: map-get($h_small_map, "font");
+        font-size: map-get($h_small_map, "font");
+    }
+}
+
+
+// Ellipsis //
+// ********************** //
+
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// Screen Reader Only //
+// ********************** //
+
+@mixin sr_only() {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+// #######################################################################
+// Links and Buttons 
+// #######################################################################
 
 @mixin button() {
 
@@ -126,6 +229,9 @@
     }
 }
 
+// #######################################################################
+// Boxes 
+// #######################################################################
 @mixin box($pad) {
     @if $pad == true {
         padding: $padding/2;
@@ -145,69 +251,6 @@
     }
 }
 
-// #######################################################################
-
-// Lists //
-
-/*
-    **********************
-    * This mixin reset the default browser stile for lists
-    * This mixin is thinked for unordered lists
-    *
-    * ARGUMENT $reset_spaces (default is true)
-    * is a bool value for reset the spaces (margin and padding) around the list
-    **********************
-*/
-
-@mixin resetlist($reset_spaces: true) {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-// #######################################################################
-
-// Title Sizes //
-
-/*
-    **********************
-    * This mixin set a responsive font scaling thinked for H tags
-    * This mixin is based on breakpoints array defined in variables.scss
-    *
-    * ARGUMENT $base_font_size (default is 1em)
-    * is the value for the smallest font size defined for smartphone view
-    **********************
-*/
-@mixin h_title_size($base_font_size: 1em) {
-
-    font-size: $base_font_size;
-
-    $bps: $bps_list; // $bps_list is in variables.scss
-    $font-size: $base_font_size;
-
-    @each $bp in $bps {
-        $font-size: $font-size + 0.2;
-        @media all and (min-width: #{$bp}) {
-            font-size: $font-size;
-        }
-    }
-
-}
-
-// Titles Style //
-// ********************** //
-@mixin h_title_style($h_map, $h_small_map) {
-    font-family: map-get($h_map, "font");
-    font-weight: map-get($h_map, "weight");
-    color: map-get($h_map, "color");
-    padding: map-get($h_map, "padding");
-    margin: map-get($h_map, "margin");
-    small {
-        color: map-get($h_small_map, "font");
-        font-size: map-get($h_small_map, "font");
-    }
-}
-
 @mixin message_box() {
     padding: $padding/4;
     border-radius: $border_radius;
@@ -222,7 +265,6 @@
     border: 1px solid darken($base_color, 10%);
 }
 
-
 // Columns //
 // ********************** //
 @mixin columns($count: 2,$gap: $space/2) {
@@ -236,13 +278,6 @@
 
 
 
-// Ellipsis //
-// ********************** //
-@mixin ellipsis {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 
 // Placeholder //
 // ********************** //
@@ -251,20 +286,6 @@
     &::-moz-placeholder {color:$color; font-size: $size; font-weight: $weight;}
     &:-ms-input-placeholder {color:$color; font-size: $size; font-weight: $weight;}
 }
-
-// Screen Reader Only //
-// ********************** //
-@mixin sr_only() {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
 
 // Position //
 // ********************** //
