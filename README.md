@@ -40,6 +40,10 @@ From version **2.0.0** all external libs and packages was removed and project is
 
 ### History
 
+#### version 3.0.0
+* New sass math usage
+* New flex grid
+
 #### version 2.3.0
 * New mixins and classes added
 * Normalize.css updated to version 8.0.1

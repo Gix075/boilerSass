@@ -19,7 +19,7 @@ module.exports = function (grunt) {
             },
             dev: {
                 files: {
-                    'css/boilerSass.css': 'sass/boilerSass.scss'
+                    'css/boilerSass.css': 'css/boilerSass.css'
                 }
             }
         },

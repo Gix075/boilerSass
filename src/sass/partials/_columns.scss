@@ -15,7 +15,7 @@
     @include columns(2,$space);
     @include columns_rule();
     &.small-gap {
-        @include columns(2,$space/2);
+        @include columns(2,$space_h);
     }
 }
 
@@ -23,7 +23,7 @@
     @include columns(3,$space);
     @include columns_rule();
     &.small-gap {
-        @include columns(3,$space/2);
+        @include columns(3,$space_h);
     }
 }
 
@@ -31,7 +31,7 @@
     @include columns(4,$space);
     @include columns_rule();
     &.small-gap {
-        @include columns(4,$space/2);
+        @include columns(4,$space_h);
     }
 }
 
@@ -39,7 +39,7 @@
     @include columns(5,$space);
     @include columns_rule();
     &.small-gap {
-        @include columns(5,$space/2);
+        @include columns(5,$space_h);
     }
 }
 

@@ -121,11 +121,11 @@ strong {
 }
 
 pre {
-    margin: 0 0 $margin/2 0;
+    margin: 0 0 $marg_h 0;
     background: $gray_light;
     border: $border_default_width $border_default_style $gray;
     border-radius: $border_radius;
-    padding: $padding/4 $padding/4 0 $padding/4;
+    padding: $pad_q $pad_q 0 $pad_q;
 }
 
 

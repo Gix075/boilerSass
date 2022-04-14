@@ -12,9 +12,26 @@
 // SIZES VARS
 // =================================
 
+@use "sass:math";
+
 $space: 2.5rem;
+$space_h: math.div($space, 2);
+$space_q: math.div($space, 4);
 $padding: $space;
+$padding_half: math.div($padding, 2);
+$padding_quarter: math.div($padding, 4);
+
+$pad: $padding;
+$pad_h: $padding_half;
+$pad_q: $padding_quarter;
+
 $margin: $space;
+$margin_half: math.div($margin, 2);
+$margin_quarter: math.div($margin, 4);
+
+$marg: $margin;
+$marg_h: $margin_half;
+$marg_q: $margin_quarter;
 
 $positions: top, right, bottom, left;
 
@@ -209,7 +226,7 @@ $ol_margin: 0 0 $space 0;
 $ol_padding: 0 0 0 $space;
 
 $list_li_lineheight: $p_lineheight;
-$list_li_margin: 0 0 $space/4 0;
+$list_li_margin: 0 0 $space_q 0;
 $list_li_padding: 0;
 
 // HEADLINES
@@ -319,8 +336,8 @@ $h_maps: (h1: $h1_map, h2: $h2_map, h3: $h3_map, h4: $h4_map, h5: $h5_map, h6: $
 $h_small_maps: (h1: $h1_small_map, h2: $h2_small_map, h3: $h3_small_map, h4: $h4_small_map, h5: $h5_small_map, h6: $h6_small_map);
 
 $table_border: 1px solid $color_3; // for tab-bordered class only
-$table_margin: 0 0 $margin/2 0;
-$table_cell_padding: $padding/4;
+$table_margin: 0 0 $marg_h 0;
+$table_cell_padding: $pad_q;
 $table_head_color: inherit;
 $table_head_background: transparent;
 $table_head_fontsize: 1.2em;

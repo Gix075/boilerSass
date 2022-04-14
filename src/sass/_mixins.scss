@@ -7,7 +7,7 @@
 
  *  MIXINS FILE
 */
-
+@use "sass:math";
 // #######################################################################
 // TYPOGRAPHY MIXINS
 // #######################################################################
@@ -17,7 +17,7 @@
 // based to $font_base_size variable //
 
 @mixin pxToRem($size) {
-    $rem: $size / $font_base_size;
+    $rem: math.div($size, $font_base_size);
     $rem_size: $rem * 1rem;
     font-size: $rem_size;
 }
@@ -121,7 +121,7 @@
     color: $white;
     text-transform: uppercase;
     line-height: 1em;
-    padding: $padding/4 $padding/2;
+    padding: $pad_q $pad_h;
     font-size: 1em;
     font-weight: 700;
     border: $border_default_width $border_default_style;
@@ -173,8 +173,8 @@
 
 @mixin button-icon($icon) {
     @include button;
-    margin-top: $margin/2;
-    padding: 0 $padding/4 0 ($padding + 10);
+    margin-top: $marg_h;
+    padding: 0 $pad_q 0 ($padding + 10);
     position: relative;
     &::before,
     &::after {
@@ -188,7 +188,7 @@
         text-align: center;
         line-height: 40px;
         background: rgba($black,0.2);
-        margin-right: $margin/4;
+        margin-right: $marg_q;
         position: absolute;
         left: 0;
         right: auto;
@@ -204,9 +204,9 @@
 }
 
 @mixin button-icon-left() {
-    padding: 0 $padding/4 0 ($padding + 10);
+    padding: 0 $pad_q 0 ($padding + 10);
     &::before {
-        margin-right: $margin/4;
+        margin-right: $marg_q;
         left: 0;
         right: auto;
     }
@@ -216,13 +216,13 @@
 }
 
 @mixin button-icon-right() {
-    padding: 0 ($padding + 10) 0 $padding/4;
+    padding: 0 ($padding + 10) 0 $pad_q;
     &::before {
         display: none;
     }
     &::after {
         display: block;
-        margin-left: $margin/4;
+        margin-left: $marg_q;
         margin-right: 0;
         left: auto;
         right: 0;
@@ -234,7 +234,7 @@
 // #######################################################################
 @mixin box($pad) {
     @if $pad == true {
-        padding: $padding/2;
+        padding: $pad_h;
     }
 }
 
@@ -252,7 +252,7 @@
 }
 
 @mixin message_box() {
-    padding: $padding/4;
+    padding: $pad_q;
     border-radius: $border_radius;
     h1,h2,h3,h4,h5,h6,p {
         margin: 0;
@@ -267,7 +267,7 @@
 
 // Columns //
 // ********************** //
-@mixin columns($count: 2,$gap: $space/2) {
+@mixin columns($count: 2,$gap: $space_h) {
     column-count: $count;
     column-gap: $gap;
 }
